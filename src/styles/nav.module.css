@@ -1,0 +1,227 @@
+.topNav{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 6%;
+}
+
+.topNav div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: solid 1px rgba(213, 213, 213, 0.618);
+}
+
+.topNavLeft{
+  width: 17%;
+}
+.topNavLeft button{
+  width: 25%;
+  height: 60%;
+  margin-right: 10px;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  border: none;
+}  
+.topNavLeft a{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+.topNavLeft a span{
+  width: 35px;
+  height: 24px;
+  text-align: center;
+  background: red;
+  color:white;
+  padding: 4px 0;
+  border-radius: 8px;
+  font-size: 12px;
+  border: none;
+}   
+.topNavLeft a p{
+  font-size: 20px;
+  letter-spacing: -1.5px;
+  margin-left: 1%;
+  font-weight: bold;
+  color: black;
+  -webkit-transform: scale(1, 1.5);
+  -moz-transform: scale(1,  1.5);
+  -o-transform: scale(1,  1.5);
+  transform: scale(1,  1.5);
+ } 
+ 
+.topNavMid{
+  flex: 2;
+}
+.topNavMid form{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75%;
+}
+.topNavMid input{  
+  width: 85%;
+  padding: 10px;
+  border: solid 1px rgba(223, 222, 222, 0.871);
+  font-size: 18px;
+  color: rgba(223, 222, 222, 0.871);
+}
+.topNavMid div{
+  display: flex;
+  justify-content: flex-start;
+  width: 15%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.topNavMid button:nth-child(1) {
+  background-color: rgba(237, 237, 237, 0.7);
+  border: solid 1px rgba(223, 222, 222, 0.871);
+  font-size: 10px;
+}
+.topNavMid button:nth-child(2) {
+  border: none;
+}
+.topNavMid span{
+  font-size: 22px;
+  padding: 10% 0;
+}
+.topNavMid button{  
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 50%;
+}
+
+.topNavRight{
+  justify-content: space-around;
+  align-content: center;
+  width: 20%;
+  padding: 0 10px;
+}
+
+.btn1, .btn2{
+  height: 100%;
+  width: 15%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border: none;
+} 
+.btn1 span{
+  height: 100%;
+  font-size: 40px;
+} 
+.btn2 span{
+  height: 80%;
+} 
+
+.sideNav{
+  display: flex;
+  flex-direction: column;
+  width: 21%;
+  height: 100%;
+  background-color: white;
+  overflow:scroll;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(182, 182, 182); 
+  border-radius: 10px;
+}
+
+ ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  margin: 2% 0;
+  list-style-type: none;
+}
+
+.sideNav div, em{
+  border-bottom: 1px solid  rgba(213, 213, 213, 0.618);
+}
+
+ li, a{
+  display: block;
+  height: auto;
+  width: 100%;
+  padding: 4% 20%;
+  font-size: 18px;
+}
+.sideNavLinks li{
+  padding: 0;
+}
+
+a{
+  padding: 8% 20%;
+}
+.sideNav p{
+  padding: 1% 0;
+  margin: 0;
+}
+
+h4{
+  padding: 8% 10% 0;
+  margin: auto;
+  color: rgb(114, 113, 113);
+}
+section{
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3% 0;
+}
+section h5{
+  display: inline-block;
+  position: relative;
+  margin: 2%;
+  font-size: 12px;
+  color: rgb(114, 113, 113);
+}
+section h5:hover{
+  cursor: pointer;
+}
+
+.sideNav li:hover{
+  background-color: rgba(213, 213, 213, 0.618);
+  cursor: pointer;
+}
+
+.blueBtn{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 130px;
+  height: 40px;
+  padding: 2%;
+  border: solid 1px rgb(14, 110, 255);
+  background-color:white;
+}
+.blueBtn span{
+  width: 30px;
+  height: 26px;
+  padding: 1px 0;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(14, 110, 255);
+  border-radius: 50%;
+}
+.blueBtn p{
+  width: 100px;
+  height: 100%;
+  padding: 3px 0;
+  font-size: 18px;
+  color: rgb(14, 110, 255);
+  font-weight: 600;
+}

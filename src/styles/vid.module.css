@@ -1,0 +1,68 @@
+h1{
+  color: black;
+  padding: 0 2%;
+  width: 100%;
+ }
+   
+.categoryContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: auto;
+  padding: px;
+}
+.vid{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.vidData{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin: 0 1%;
+}
+.img{
+  width: 18%;
+  height: auto;
+  padding: 1% 3%;
+}
+
+.img span{
+  width: 37px;
+  height: 37px;
+  border: solid purple 1px;
+  background: purple;
+  font-size: 22px;
+  border-radius: 50%;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  padding: 1%;
+  height: auto;
+}
+.details span{
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.details h5 {
+  padding: 2%;
+  margin: 0
+}
+.details p{
+  display: inline-block;
+  padding: 1% 2%;
+  margin: 0
+}
