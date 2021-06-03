@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby"
 import * as styles from '../styles/nav.module.css'
+import { StaticImage } from "gatsby-plugin-image"
 
 const SideNav = () => {
   return (
@@ -26,47 +27,55 @@ const SideNav = () => {
         </ul>
       </div>
       <div>
-        <ul>
-          <li style={{fontSize: "14px"}}>Sign in to like videos, comment, and subscribe</li>
-          <li>
-            <button className={styles.blueBtn}>
-              <span role="img" aria-label="profile">👤</span>
-              <p>SIGN IN</p>
-              </button>
-            </li>
-        </ul>
+        <section className={styles.signInSect}>
+          <p>Sign in to like videos, comment, and subscribe</p>
+          <button className={styles.blueBtn}>
+            <span role="img" aria-label="profile">👤</span>
+            <p>SIGN IN</p>
+          </button>
+        </section>
       </div>
+      <h4>BEST OF YOUTUBE</h4>
       <div>
-        <h4>BEST OF YOUTUBE</h4>
         <ul>
           <li>
+            <StaticImage src="../images/music.png" alt="music" />
             <p>Music</p>
           </li>
           <li>
+            <StaticImage src="../images/sport.png" alt="sport" />
             <p>Sports</p>
           </li>
           <li>
+            <StaticImage src="../images/game.png" alt="game" />
             <p>Gaming</p>
           </li>
           <li>
+            <StaticImage src="../images/movie.png" alt="movies and shows" />
             <p>Movie & Shows</p>
           </li>
           <li>
+            <StaticImage src="../images/news.png" alt="news" />
             <p>News</p>
           </li>
           <li>
+            <StaticImage src="../images/live.png" alt="live" />
             <p>Live</p>
           </li>
           <li>
+            <StaticImage src="../images/fash.png" alt="fashion" />
             <p>Fashion</p>
           </li>
           <li>
+            <StaticImage src="../images/learn.png" alt="learning" />
             <p>Learning</p>
           </li>
           <li>
+            <StaticImage src="../images/yt-red.png" alt="youtube icon" />
             <p>Spotlight</p>
           </li>
           <li>
+            <StaticImage src="../images/vr.png" alt="vr symbol" />
             <p>360 Video</p>
           </li>
         </ul>
@@ -74,30 +83,37 @@ const SideNav = () => {
       <div>
         <ul>
           <li>
+            <StaticImage src="../images/plus.png" alt="plus symbol" />
             <p>Browse Channels</p>
           </li>
         </ul>
       </div>
+      <h4>MORE FROM YOUTUBE</h4>
       <div>
-        <h4>MORE FROM YOUTUBE</h4>
         <ul>
           <li>
+            <StaticImage src="../images/yt-grey.png" alt="youtube grey symbol" />
             <p>YouTube Premium</p>
           </li>
           <li>
+            <StaticImage src="../images/live.png" alt="live" />
             <p>Live</p>
           </li>
           <em></em>
           <li>
+            <StaticImage src="../images/setting.png" alt="settings" />
             <p>Settings</p>
           </li>
           <li>
+            <StaticImage src="../images/flag.png" alt="history" />
             <p>Report History</p>
           </li>
           <li>
+            <StaticImage src="../images/help.png" alt="help" />
             <p>Help</p>
           </li>
           <li>
+            <p>!</p>
             <p>Send Feedback</p>
           </li>
           <em></em>
@@ -119,7 +135,7 @@ const SideNav = () => {
           <h5>Test new features</h5>
         </section>
         <section>
-          <p>© 2020 Google LLC</p>
+          <p>© 2021 Google LLC</p>
         </section>
       </div>
     </div>
