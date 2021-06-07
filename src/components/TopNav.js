@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from "gatsby"
 import * as styles from '../styles/nav.module.css'
 
-const TopNav = () => {
+const TopNav = ({ changeNav }) => {
   return (
     <div className={styles.topNav}>
       <div className={styles.topNavLeft}>
         <button>
-          <span role="img" aria-label="dropdown">☰</span>
+          <span role="img" aria-label="dropdown" onClick={() => changeNav()}>☰</span>
         </button>
         <Link to="/">
           <span role="img" aria-label="play button">▶</span>

@@ -6,22 +6,27 @@ import { StaticImage } from "gatsby-plugin-image"
 const SideNav = () => {
   return (
     <div className={styles.sideNav} >
-      <div className={styles.sideNavLinks}>
+      <div >
         <ul>
           <li>
+            <span role="img" aria-label="home">🏠</span>
             <Link to="/">Home</Link>
           </li>
           <li>
+            <StaticImage src="../images/compass.png" alt="compass" />
             <Link to="/explore">Explore</Link>
           </li>
           <li>
+            <StaticImage src="../images/subscriptions.png" alt="subscriptions" />
             <Link to="/subscriptions">Subscriptions</Link>
           </li>
           <em></em>
           <li>
+            <StaticImage src="../images/lib.png" alt="library" />
             <Link to="/library">Library</Link>
           </li>
           <li>
+            <StaticImage src="../images/history.png" alt="history" />
             <Link to="/history">History</Link>
           </li>
         </ul>
