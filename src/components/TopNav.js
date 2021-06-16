@@ -34,10 +34,10 @@ const TopNav = ({ changeNav }) => {
         <button className={styles.btn2}>
           <span role="img" aria-label="3 dots">⋮</span>
         </button>
-        <button className={styles.blueBtn}>
+        <Link className={styles.blueBtn} to="/signin">
           <span role="img" aria-label="profile">👤</span>
           <p>SIGN IN</p>
-        </button>
+        </Link>
       </div>
     </div>
   )

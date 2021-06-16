@@ -34,10 +34,10 @@ const SideNav = () => {
       <div>
         <section className={styles.signInSect}>
           <p>Sign in to like videos, comment, and subscribe</p>
-          <button className={styles.blueBtn}>
+          <Link className={styles.blueBtn} to="/signin">
             <span role="img" aria-label="profile">👤</span>
             <p>SIGN IN</p>
-          </button>
+          </Link>
         </section>
       </div>
       <h4>BEST OF YOUTUBE</h4>

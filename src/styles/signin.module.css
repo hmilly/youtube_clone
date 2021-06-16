@@ -1,0 +1,80 @@
+
+.signin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid rgba(128, 128, 128, 0.466) 1px;
+    border-radius: 10px;
+    margin: 250px auto;
+    height: 500px;
+    width: 450px;
+    text-align: center;
+}
+.signin main{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 70%;  
+}
+.signin h2, .signin h4{
+    font-weight: 200;
+    padding: 3%;
+    margin: 0;
+    color: black;
+}
+
+.signin form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+    width: 84%;
+}
+
+.signin form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 26%;
+    width: 100%;
+    text-align: left;
+}
+
+.signin form input{
+    border: solid rgba(128, 128, 128, 0.466) 1px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 6%;
+}
+
+.btnTxt{
+    width: 31%;
+    font-weight: 700;
+    background: white;
+    color: #1a73e8;
+    text-align: left;
+    border: none;
+    padding: 2% 0;
+}
+
+.signin form p{
+    font-size: 12px;
+}
+
+.signin form div:nth-child(3){
+    padding: 1% 0;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.signin form div:nth-child(3) button:nth-child(2){
+    width: 20%;
+    height: 40px;
+    font-weight: 700;
+    background: #1a73e8;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}

@@ -115,7 +115,7 @@
 
 
 .smNav {
-  width: 70px;
+  width: 80px;
   height: 100%;
   margin-left:-8px;
 }
@@ -123,10 +123,9 @@
   width: 0;
 }
 .smNav li {
-  width: 70px;
+  width: 80px;
   height: 100%;
 }
-
 .smNav a{
   display: flex;
   flex-direction: column;
@@ -136,19 +135,17 @@
   margin: 0;
   font-size: 10px;
 }
-
 .smNav div, .smNav span {
   width: 25px;
   margin-left: 8px;
   height: 30px;
-}
-.smNav span{
   margin: 0;
 }
 .smNav p {
   width: 100%;
   text-align: center;
   padding: 15% 0;
+  margin: 0;
 }
 
 
@@ -194,20 +191,17 @@
   align-items: center;
   font-size: 15px;
   padding: 4% 15%;
-  border: solid red 1px;
 }
 li p, li a{
   padding: 0;
   margin-left: 20%;
   width: 100%;
-  border: solid red 1px;
 }
 
 li div, li span{
   width: 20%;
   height: 30px;
   font-size: 20px;
-  border: solid red 1px;
 }
 
 .signInSect{
