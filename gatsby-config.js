@@ -3,7 +3,6 @@ module.exports = {
     title: "youtube-clone",
   },
   plugins: [
-    "gatsby-plugin-styled-components",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-transformer-remark",

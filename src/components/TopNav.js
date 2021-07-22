@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby"
 import * as styles from '../styles/nav.module.css'
+import { StaticImage } from "gatsby-plugin-image"
 
 const TopNav = ({ changeNav }) => {
   return (
@@ -10,31 +11,26 @@ const TopNav = ({ changeNav }) => {
           <span role="img" aria-label="dropdown" onClick={() => changeNav()}>☰</span>
         </button>
         <Link to="/">
-          <span role="img" aria-label="play button">▶</span>
-          <p>YouTube</p>
+          <StaticImage src="../images/yt.png" alt="Youtube logo" />
         </Link>
       </div>
-      <div className={styles.topNavMid}>
-        <form>
-          <input placeholder="Search"></input>
-          <div>
-            <button>
-              <span role="img" aria-label="dropdown">🔍</span>
-            </button>
-            <button>
-              <span role="img" aria-label="dropdown">🎤</span>
-            </button>
-          </div>
-        </form>
-      </div>
+      <form className={styles.topNavMid}>
+        <input placeholder="Search"></input>
+        <button>
+          <span role="img" aria-label="dropdown">🔍</span>
+        </button>
+        <button>
+          <span role="img" aria-label="dropdown">🎤</span>
+        </button>
+      </form>
       <div className={styles.topNavRight}>
-        <button className={styles.btn1}>
+        <button>
           <span role="img" aria-label="grid">▦</span>
         </button>
-        <button className={styles.btn2}>
+        <button>
           <span role="img" aria-label="3 dots">⋮</span>
         </button>
-        <Link className={styles.blueBtn} to="/signin">
+        <Link id="blueBtn" to="/signin">
           <span role="img" aria-label="profile">👤</span>
           <p>SIGN IN</p>
         </Link>

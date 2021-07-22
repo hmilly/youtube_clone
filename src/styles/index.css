@@ -1,10 +1,114 @@
 *{
   box-sizing: border-box;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .index {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr;
+  gap: 5px; 
+  grid-auto-flow: row;
+  grid-template-areas:
+    "topNav"
+    "sideNavContainer";
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.videoContainer {
+  grid-area: videoContainer;
+  overflow-y: scroll;
+  height: auto;
+}
+
+.videoCategory{
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 10px; 
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+}
+
+.sideNavContainer {
+  grid-area: sideNavContainer;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 5px; 
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sideNav videoContainer";
+  overflow: hidden;
+}
+
+span{
+  display: inline-block;
+  font-size: 25px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  color: grey;
+}
+
+button:hover, link:hover{
+  cursor: pointer;
+}
+button:visited, link:visited, a:visited{
+  text-decoration: none;
+}
+button:active, link:active, a:active{
+  text-decoration: none;
+}
+
+#blueBtn{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 116px;
+  height: 36px;
+  padding: 5px;
+  align-content: center;
+  justify-items: center;
+  border: solid 1px #065fd4;
+  background-color:white;
+  text-decoration: none;
+}
+#blueBtn span{
+  width: 24px;
+  height: 24px;
+  padding: 1px;
+  font-size: 14px;
+  color: white;
+  background-color: #065fd4;
+  border-radius: 50%;
+}
+#blueBtn p{
+  padding: 3px;
+  font-size: 14px;
+  color: #065fd4;
+  font-weight: 600;
+} 
+.blueBtn:hover,
+#blueBtn p:hover,
+.blueBtn:visited,
+#blueBtn p:visited,
+.blueBtn:active,
+#blueBtn p:active{
+  color: #065fd4;
+  text-decoration: none;
+} 
+
+/* 
+
+.index {
+  display: grid;
   position: fixed;
   flex-direction: column;
   width: 100%;
@@ -66,4 +170,4 @@ a{
 }
 a:visited{
   color: black;
-}
+} */

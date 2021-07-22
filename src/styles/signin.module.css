@@ -1,16 +1,56 @@
-
-.signin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border: solid rgba(128, 128, 128, 0.466) 1px;
-    border-radius: 10px;
-    margin: 250px auto;
-    height: 500px;
-    width: 450px;
-    text-align: center;
+*{
+    
 }
+
+.signin {
+    display: grid; 
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr 0.5fr 1fr 0.3fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."
+      ". main ."
+      ". main ."
+      ". footer ."
+      ". . ."; 
+  }
+.signin main{
+    display: grid; 
+    grid-template-columns: 1fr;
+    border: solid 1px grey; 
+    grid-template-rows: 1fr 2fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header"
+      "form"; 
+    grid-area: main;
+}
+  .signin header {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-area: header;
+    }
+
+  .signin form {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-area: form;
+    }
+  .signin footer {
+    display: grid; 
+    grid-template-columns: 3fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-area: footer; 
+    }
+
+
+/* 
 .signin main{
     display: flex;
     flex-direction: column;
@@ -77,4 +117,4 @@
     border-radius: 5px;
     border: none;
     color: white;
-}
+} */

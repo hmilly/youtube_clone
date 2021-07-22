@@ -17,7 +17,7 @@ const Video = ({ vidData }) => {
     return (
         <>
             {vidData.map((v, i) => (
-                <div className={styles.categoryContent} key={`v_${i}`}>
+                <div key={`v_${i}`}>
                     <div className={styles.vid}>
                         <iframe
                             src={`https://www.youtube.com/embed/${v.youtube_trailer_key}`}
@@ -42,12 +42,16 @@ const Video = ({ vidData }) => {
                         </div>
                         <div className={styles.details}>
                             <h5>{v.title}</h5>
-                            <div>
-                                <p>{v.directors[0]}</p>
-                                <p><span role="img" aria-label="tick">✔</span></p><br />
-                                <p>{getPopularity(v.popularity)}K</p><p>views</p>
-                                <p>{getDate(v.year)}</p><p>years ago</p>
-                            </div>
+                            <section>
+                                <div>
+                                    <p>{v.directors[0]}</p>
+                                    <span role="img" aria-label="tick">✔</span>
+                                </div>
+                                <div>
+                                    <p>{getPopularity(v.popularity)}K</p><p>views</p>
+                                    <p>{getDate(v.year)}</p><p>years ago</p>
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>
