@@ -1,7 +1,3 @@
-*{
-  border: solid red 1px;
-}
-
 .topNav{
   grid-area: topNav;
   display: grid;
