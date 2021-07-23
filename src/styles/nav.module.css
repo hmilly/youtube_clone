@@ -103,8 +103,8 @@
 }
 
 .sideNav li div{
-  height: 30px;
-  width: 30px;
+  width: 24px;
+  height: 24px;
 }
 .sideNav li a, .sideNav li p {
   justify-self: left;
@@ -190,6 +190,8 @@ section h5:hover{
 }
 .smNav div{
   align-self: end;
+  width: 24px;
+  height: 24px;
 }
 .smNav p{
   align-self: start;
