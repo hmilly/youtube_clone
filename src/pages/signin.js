@@ -6,22 +6,28 @@ const signin = () => {
         <div className={styles.signin}>
             <main>
                 <header>
-                    <h2>Google</h2>
+                    <div>
+                        <h2>G</h2>
+                        <h2>o</h2>
+                        <h2>o</h2>
+                        <h2>g</h2>
+                        <h2>l</h2>
+                        <h2>e</h2>
+                    </div>
                     <h2>Sign in</h2>
                     <h4>to continue to YouTube</h4>
                 </header>
                 <form>
                     <div>
                         <input placeholder="Email or phone"></input>
-                        <button className={styles.btnTxt}>Forgot email?</button>
+                        <button>Forgot email?</button>
                     </div>
-
                     <div>
                         <p>Not your computer? Use Guest mode to sign in privately.</p>
-                        <button className={styles.btnTxt}>Learn more</button>
+                        <button>Learn more</button>
                     </div>
                     <div>
-                        <button className={styles.btnTxt}>Create account</button>
+                        <button>Create account</button>
                         <button>Next</button>
                     </div>
                 </form>

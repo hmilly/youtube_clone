@@ -9,7 +9,7 @@ const SmallSideNav = () => {
             <ul >
                 <li>
                     <Link to="/">
-                        <span role="img" aria-label="home">🏠</span>
+                        <StaticImage src="../images/compass.png" alt="compass" />
                         <p>Home</p>
                     </Link>
                 </li>

@@ -1,6 +1,6 @@
-/* *{
-border: solid red 1px;
-} */
+*{
+  border: solid red 1px;
+}
 
 .topNav{
   grid-area: topNav;
@@ -76,8 +76,8 @@ border: solid red 1px;
 .sideNav {
   grid-area: sideNav;
   display: grid;
-  grid-template-rows: repeat(1fr);
   grid-template-columns: 220px;
+  max-width: 220px;
   overflow: hidden;
 }
 .sideNav:hover{
@@ -85,7 +85,6 @@ border: solid red 1px;
 }
 ::-webkit-scrollbar {
   width: 6px;
-  margin: -5px 0;
 }
 ::-webkit-scrollbar-thumb {
   background: rgb(182, 182, 182); 
@@ -93,7 +92,7 @@ border: solid red 1px;
 }
 
 .sideNav ul{
-  width: 210px;
+  max-width: 210px;
   padding: 3% 0;
   list-style-type: none;
   border-bottom: 1px solid  rgba(213, 213, 213, 0.618);
@@ -121,6 +120,7 @@ li h2{
   background-color: white;
 }
 .sideNav h4{
+  max-width: 210px;
   font-size: 14px;
   padding: 6% 10% 2%;
   color: rgb(114, 113, 113);
@@ -128,6 +128,7 @@ li h2{
 
 section{
   padding: 6% 8% 0;
+  max-width: 210px;
 }
 section:last-child{
   padding: 8%;
@@ -157,8 +158,6 @@ section h5:hover{
   background-color: rgba(165, 165, 165, 0.659);
   cursor: pointer;
 }
-
-
 .signInSect{ 
   padding: 8% 10%;
   border-bottom: 1px solid  rgba(213, 213, 213, 0.618);
@@ -169,40 +168,35 @@ section h5:hover{
   padding-bottom: 8%;
 }
 
-/* 
-
 .smNav {
-  width: 80px;
-  height: 100%;
-  margin-left:-8px;
+  grid-area: sideNav;
+  display: grid;
+  max-width: 80px;
+  grid-template-columns: 80px;
+  grid-template-rows: 0.45fr;
 }
-.smNav ul {
-  width: 0;
-}
-.smNav li {
-  width: 80px;
-  height: 100%;
+
+.smNav ul{
+  display: grid;
+  list-style-type: none;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  align-content: center;
+  justify-content: center;
 }
 .smNav a{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 20% 0;
-  margin: 0;
-  font-size: 10px;
+  display: grid;
+  grid-template-columns: 80px;
+  grid-template-rows: repeat(2, 36px);
+  justify-items: center;
+  text-decoration: none;
 }
-.smNav div, .smNav span {
-  width: 25px;
-  margin-left: 8px;
-  height: 30px;
-  margin: 0;
+.smNav div{
+  align-self: end;
 }
-.smNav p {
-  width: 100%;
-  text-align: center;
-  padding: 15% 0;
-  margin: 0;
+.smNav p{
+  align-self: start;
+  color: grey;
+  font-size: 12px;
 }
-
-*/
