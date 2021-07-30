@@ -10,7 +10,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: 70px 1fr;
   gap: 5px; 
-  grid-auto-flow: row;
   grid-template-areas:
     "topNav"
     "sideNavContainer";
@@ -18,33 +17,43 @@
   overflow: hidden;
 }
 
+.sideNavContainer {
+  grid-area: sideNavContainer;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 5px; 
+  grid-template-areas:
+    "sideNav videoContainer";
+  overflow: hidden;
+}
+
 .videoContainer {
   grid-area: videoContainer;
+  display: grid;
   grid-template-columns: auto;
   grid-gap: 5px;
   overflow-y: scroll;
   height: auto;
 }
 
-.videoCategory{
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: repeat(3, 1fr); 
-  gap: 10px; 
-  justify-content: center; 
-  align-content: center; 
-
+.scrollingDiv{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 60px; 
+  gap: 4px 4px; 
 }
 
-.sideNavContainer {
-  grid-area: sideNavContainer;
-  display: grid;
-  grid-template-rows: 1fr;
-  gap: 5px; 
-  grid-auto-flow: row;
-  grid-template-areas:
-    "sideNav videoContainer";
-  overflow: hidden;
+.videoCategory{
+  display: grid; 
+   grid-template-columns: 1fr; 
+  grid-template-rows: 0.2fr 1.8fr; 
+  gap: 10px; 
+}
+.videos{
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: auto; 
+  gap: 10px;
 }
 
 span{

@@ -70,10 +70,12 @@
 } 
 
 .sideNav {
+  border: solid red 1px;
   grid-area: sideNav;
   display: grid;
   grid-template-columns: 220px;
   max-width: 220px;
+  min-width: 220px;
   overflow: hidden;
 }
 .sideNav:hover{

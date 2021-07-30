@@ -17,7 +17,7 @@ const Video = ({ vidData }) => {
     return (
         <>
             {vidData.map((v, i) => (
-                <div key={`v_${i}`}>
+                <div className={styles.video} key={`v_${i}`}>
                     <div className={styles.vid}>
                         <iframe
                             src={`https://www.youtube.com/embed/${v.youtube_trailer_key}`}
