@@ -3,6 +3,7 @@ import React from 'react'
 const ScrollingDiv = () => {
     return (
         <ul className="scrollingDiv">
+            <button>➤</button>
             <li>
                 <p>All</p>
             </li>
@@ -13,7 +14,7 @@ const ScrollingDiv = () => {
                 <p>Comedies</p>
             </li>
             <li>
-                <p>Summer Olymic Games</p>
+                <p>Olympic Games</p>
             </li>
             <li>
                 <p>Boats</p>

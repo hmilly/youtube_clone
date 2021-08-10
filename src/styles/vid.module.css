@@ -56,36 +56,5 @@ h5 {
 }
 .details section div:last-child{
   display: grid;
-  bordeR: solid blue 1px;
   grid-template-columns: 1fr 2fr 1fr 2fr
 }
-
-/* 
-   .vid{
-  display: flex;
-  flex: 1;
-  width: 100%;
-  height: auto;
-  padding: 10px;
-}
-
-.details{
-  display: flex;
-  flex-direction: column;
-  width: 82%;
-  padding: 1%;
-  height: auto;
-}
-.details span{
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  border-radius: 50%;
-}
-
-.details 
-.details p{
-  display: inline-block;
-  padding: 1% 2%;
-  margin: 0
-} */

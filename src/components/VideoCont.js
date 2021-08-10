@@ -8,11 +8,10 @@ const VideoCont = ({ genre }) => {
     <ScrollingDiv/>
       {genre.map((vidData, i) => (
         <div className="videoCategory" key={`video_${i}`}>
-          <h1>Category</h1>
+          <h1>Trending</h1>
           <div className="videos">
             <Video vidData={vidData} />
           </div>
-          
         </div>
       ))}
     </>
