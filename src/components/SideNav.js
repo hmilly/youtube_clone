@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from "gatsby"
 import * as styles from '../styles/nav.module.css'
 import { StaticImage } from "gatsby-plugin-image"
+import SnBestOf from './SnBestOf'
+import SnMore from './SnMore'
 
 const SideNav = () => {
   return (
@@ -30,7 +32,6 @@ const SideNav = () => {
           <Link to="/history">History</Link>
         </li>
       </ul >
-
       <section className={styles.signInSect}>
         <p>Sign in to like videos, comment, and subscribe</p>
         <Link id="blueBtn" to="/signin">
@@ -38,90 +39,16 @@ const SideNav = () => {
           <p>SIGN IN</p>
         </Link>
       </section>
-
       <h4>BEST OF YOUTUBE</h4>
-
-      <ul>
-        <li>
-          <StaticImage src="../images/music.png" alt="music" />
-          <p>Music</p>
-        </li>
-        <li>
-          <StaticImage src="../images/sport.png" alt="sport" />
-          <p>Sports</p>
-        </li>
-        <li>
-          <StaticImage src="../images/game.png" alt="game" />
-          <p>Gaming</p>
-        </li>
-        <li>
-          <StaticImage src="../images/movie.png" alt="movies and shows" />
-          <p>Movie & Shows</p>
-        </li>
-        <li>
-          <StaticImage src="../images/news.png" alt="news" />
-          <p>News</p>
-        </li>
-        <li>
-          <StaticImage src="../images/live.png" alt="live" />
-          <p>Live</p>
-        </li>
-        <li>
-          <StaticImage src="../images/fash.png" alt="fashion" />
-          <p>Fashion</p>
-        </li>
-        <li>
-          <StaticImage src="../images/learn.png" alt="learning" />
-          <p>Learning</p>
-        </li>
-        <li>
-          <StaticImage src="../images/yt-red.png" alt="youtube icon" />
-          <p>Spotlight</p>
-        </li>
-        <li>
-          <StaticImage src="../images/vr.png" alt="vr symbol" />
-          <p>360 Video</p>
-        </li>
-      </ul>
-
+      <SnBestOf />
       <ul>
         <li>
           <StaticImage src="../images/plus.png" alt="plus symbol" />
           <p>Browse Channels</p>
         </li>
       </ul>
-
       <h4>MORE FROM YOUTUBE</h4>
-
-      <ul>
-        <li>
-          <StaticImage src="../images/yt-grey.png" alt="youtube grey symbol" />
-          <p>YouTube Premium</p>
-        </li>
-        <li>
-          <StaticImage src="../images/live.png" alt="live" />
-          <p>Live</p>
-        </li>
-
-        <li>
-          <StaticImage src="../images/setting.png" alt="settings" />
-          <p>Settings</p>
-        </li>
-        <li>
-          <StaticImage src="../images/flag.png" alt="history" />
-          <p>Report History</p>
-        </li>
-        <li>
-          <StaticImage src="../images/help.png" alt="help" />
-          <p>Help</p>
-        </li>
-        <li>
-          <h2>!</h2>
-          <p>Send Feedback</p>
-        </li>
-
-      </ul>
-
+      <SnMore />
       <section>
         <h5>About</h5>
         <h5>Press</h5>
@@ -131,7 +58,6 @@ const SideNav = () => {
         <h5>Advertise</h5>
         <h5>Developers</h5>
       </section>
-
       <section>
         <h5>Terms</h5>
         <h5>Privacy</h5>
@@ -139,11 +65,9 @@ const SideNav = () => {
         <h5>How YouTube works</h5>
         <h5>Test new features</h5>
       </section>
-
       <section>
         <p>© 2021 Google LLC</p>
       </section>
-
     </div >
   )
 }

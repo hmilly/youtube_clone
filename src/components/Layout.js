@@ -4,19 +4,12 @@ import SideNav from './SideNav'
 import SmallSideNav from './SmallSideNav'
 
 const Layout = ({ children }) => {
-
-    const [largeNav, setNav] = useState(true)
-
-    const changeNav = () => {
-        setNav(!largeNav)
-    }
-
-
+    const [lgNav, setLgnav] = useState(true)
     return (
         <>
-            <TopNav changeNav={changeNav} />
+            <TopNav lgNav={lgNav} setLgnav={setLgnav} />
             <div className="sideNavContainer">
-                {largeNav ? <SideNav /> : <SmallSideNav />}
+                {lgNav ? <SideNav /> : <SmallSideNav />}
                 {children}
             </div>
         </>

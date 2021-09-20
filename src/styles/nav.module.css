@@ -1,33 +1,37 @@
-.topNav{
+.topNav {
   grid-area: topNav;
   display: grid;
   grid-template-rows: 70px;
   grid-template-columns: 220px 4fr 1fr;
 }
 
-.topNavLeft{
+.topNavLeft {
   display: grid;
   grid-template-columns: 60px 1fr;
   align-items: center;
   justify-items: center;
 }
-.topNavLeft button{
+
+.topNavLeft button {
   width: 100%;
   background-color: white;
   border: none;
 }
-.topNavLeft a div, .topNavLeft a {
+
+.topNavLeft a div,
+.topNavLeft a {
   padding: 0;
   width: 120px;
   height: 30px;
 }
 
-.topNavMid{
+.topNavMid {
   display: grid;
   grid-template-columns: 6fr 1fr 1fr;
   align-items: center;
 }
-.topNavMid input{
+
+.topNavMid input {
   width: 90%;
   height: 50%;
   justify-self: end;
@@ -36,34 +40,38 @@
   color: rgba(223, 222, 222, 0.871);
   border: solid 1px rgba(223, 222, 222, 0.871);
 }
-.topNavMid button{
+
+.topNavMid button {
   width: 70px;
   height: 50%;
   justify-self: start;
   background-color: #f8f8f8;
   border: solid 1px rgba(223, 222, 222, 0.871);
 }
-.topNavMid button:last-child{
+
+.topNavMid button:last-child {
   border: none;
   background-color: white;
   width: 50%;
   margin-left: -30px;
 }
-.topNavMid span{
+
+.topNavMid span {
   font-size: 15px;
   height: 70%;
 }
 
-.topNavRight{
+.topNavRight {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   align-items: center;
 }
-.topNavRight button{
+
+.topNavRight button {
   border: none;
   background-color: white;
   width: 50px;
-} 
+}
 
 .sideNav {
   grid-area: sideNav;
@@ -73,24 +81,28 @@
   min-width: 220px;
   overflow: hidden;
 }
-.sideNav:hover{
+
+.sideNav:hover {
   overflow-y: scroll;
 }
+
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: rgb(182, 182, 182); 
+  background: rgb(182, 182, 182);
   border-radius: 10px;
 }
 
-.sideNav ul{
+.sideNav ul {
   max-width: 210px;
   padding: 3% 0;
   list-style-type: none;
-  border-bottom: 1px solid  rgba(213, 213, 213, 0.618);
+  border-bottom: 1px solid rgba(213, 213, 213, 0.618);
 }
-.sideNav li{
+
+.sideNav li {
   display: grid;
   grid-template-rows: 40px;
   grid-template-columns: 1fr 2fr;
@@ -99,34 +111,40 @@
   font-size: 15px;
 }
 
-.sideNav li div{
+.sideNav li div {
   width: 24px;
   height: 24px;
 }
-.sideNav li a, .sideNav li p {
+
+.sideNav li a,
+.sideNav li p {
   justify-self: left;
   color: black;
   text-decoration: none;
 }
-li h2{
+
+li h2 {
   padding: 2px 8px;
   background-color: white;
 }
-.sideNav h4{
+
+.sideNav h4 {
   max-width: 210px;
   font-size: 14px;
   padding: 6% 10% 2%;
   color: rgb(114, 113, 113);
 }
 
-section{
+section {
   padding: 6% 8% 0;
   max-width: 210px;
 }
-section:last-child{
+
+section:last-child {
   padding: 8%;
 }
-section h5{
+
+section h5 {
   display: inline-block;
   position: relative;
   margin: 3px;
@@ -134,28 +152,35 @@ section h5{
   font-size: 12px;
   color: #606060
 }
-section p{
+
+section p {
   font-size: 12px;
   font-weight: 500;
   color: rgb(148, 148, 148);
 }
 
-section h5:hover{
+section h5:hover {
   cursor: pointer;
 }
-.sideNav li:hover, .smNav a:hover{
+
+.sideNav li:hover,
+.smNav a:hover {
   background-color: rgba(213, 213, 213, 0.659);
   cursor: pointer;
 }
-.sideNav li:active, .smNav a:active{
+
+.sideNav li:active,
+.smNav a:active {
   background-color: rgba(165, 165, 165, 0.659);
   cursor: pointer;
 }
-.signInSect{ 
+
+.signInSect {
   padding: 8% 10%;
-  border-bottom: 1px solid  rgba(213, 213, 213, 0.618);
+  border-bottom: 1px solid rgba(213, 213, 213, 0.618);
 }
-.signInSect p{
+
+.signInSect p {
   font-size: 14px;
   color: black;
   padding-bottom: 8%;
@@ -169,7 +194,7 @@ section h5:hover{
   grid-template-rows: 0.45fr;
 }
 
-.smNav ul{
+.smNav ul {
   display: grid;
   list-style-type: none;
   padding: 0;
@@ -178,19 +203,22 @@ section h5:hover{
   align-content: center;
   justify-content: center;
 }
-.smNav a{
+
+.smNav a {
   display: grid;
   grid-template-columns: 80px;
   grid-template-rows: repeat(2, 36px);
   justify-items: center;
   text-decoration: none;
 }
-.smNav div{
+
+.smNav div {
   align-self: end;
   width: 24px;
   height: 24px;
 }
-.smNav p{
+
+.smNav p {
   align-self: start;
   color: grey;
   font-size: 12px;

@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 70px 1fr;
-  gap: 5px; 
+  gap: 5px;
   grid-template-areas:
     "topNav"
     "sideNavContainer";
@@ -20,7 +20,7 @@
   grid-area: sideNavContainer;
   display: grid;
   grid-template-rows: 1fr;
-  gap: 5px; 
+  gap: 5px;
   grid-template-areas:
     "sideNav videoContainer";
   overflow: hidden;
@@ -35,33 +35,48 @@
   height: auto;
 }
 
-.scrollingDiv{
-  display: grid;
+.scrollingDivParent {
+  display: block;
   position: relative;
-  grid-auto-columns: auto;
-  grid-template-columns: repeat(14, auto); 
-  grid-template-rows: auto; 
-  gap: 4px 15px;
   height: 50px;
-  border-bottom: 1px solid  rgba(213, 213, 213, 0.618);
-  border-top: 1px solid  rgba(213, 213, 213, 0.618);
-  padding: 10px;
-  overflow-x: scroll;
-}
-.scrollingDiv button{
-  height: 100%;
-  width: 56px;
-  right: 0;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  font-size: 20px;
-}
-.scrollingDiv::-webkit-scrollbar{
-  display: none;
+  width: auto;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(213, 213, 213, 0.618);
+  border-top: 1px solid rgba(213, 213, 213, 0.618);
 }
 
-.scrollingDiv li{
+.scrollingDiv {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-template-columns: repeat(14, auto);
+  grid-template-rows: auto;
+  gap: 4px 15px;
+  height: 50px;
+  width: auto;
+  padding: 10px;
+  z-index: 99;
+}
+
+.scrollingDivParent button {
+  position: fixed;
+  height: 47px;
+  width: 40px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.907);
+  font-size: 30px;
+  overflow-x: none;
+}
+
+.scrollR {
+  right: 0;
+}
+
+.scrollL {
+  left: 220;
+}
+
+.scrollingDiv li {
   border: solid rgb(194, 194, 194) 1px;
   background-color: rgba(213, 213, 213, 0.659);
   border-radius: 20px;
@@ -70,28 +85,31 @@
   list-style-type: none;
   cursor: pointer;
 }
-.scrollingDiv li:hover{
+
+.scrollingDiv li:hover {
   transition: background-color 0.5s ease;
 }
-.scrollingDiv li:active{
+
+.scrollingDiv li:active {
   background-color: black;
   color: white;
 }
 
-.videoCategory{
-  display: grid; 
-   grid-template-columns: 1fr; 
-  grid-template-rows: 0.2fr 1.8fr; 
-  gap: 10px; 
-}
-.videos{
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: auto; 
+.videoCategory {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
   gap: 10px;
 }
 
-span{
+.videos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+span {
   display: inline-block;
   font-size: 25px;
   height: 100%;
@@ -101,17 +119,24 @@ span{
   color: grey;
 }
 
-button:hover, link:hover{
+button:hover,
+link:hover {
   cursor: pointer;
 }
-button:visited, link:visited, a:visited{
-  text-decoration: none;
-}
-button:active, link:active, a:active{
+
+button:visited,
+link:visited,
+a:visited {
   text-decoration: none;
 }
 
-#blueBtn{
+button:active,
+link:active,
+a:active {
+  text-decoration: none;
+}
+
+#blueBtn {
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 116px;
@@ -120,10 +145,11 @@ button:active, link:active, a:active{
   align-content: center;
   justify-items: center;
   border: solid 1px #065fd4;
-  background-color:white;
+  background-color: white;
   text-decoration: none;
 }
-#blueBtn span{
+
+#blueBtn span {
   width: 24px;
   height: 24px;
   padding: 1px;
@@ -132,18 +158,20 @@ button:active, link:active, a:active{
   background-color: #065fd4;
   border-radius: 50%;
 }
-#blueBtn p{
+
+#blueBtn p {
   padding: 3px;
   font-size: 14px;
   color: #065fd4;
   font-weight: 600;
-} 
+}
+
 .blueBtn:hover,
 #blueBtn p:hover,
 .blueBtn:visited,
 #blueBtn p:visited,
 .blueBtn:active,
-#blueBtn p:active{
+#blueBtn p:active {
   color: #065fd4;
   text-decoration: none;
-} 
+}

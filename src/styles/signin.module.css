@@ -1,129 +1,152 @@
 .signin {
-    display: grid; 
+    display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 450px 1fr; 
-    grid-template-rows: 200px 190px 320px 50px 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      ". . ."
-      ". main ."
-      ". main ."
-      ". footer ."
-      ". . ."; 
-  }
-  .signin main{
-    display: grid; 
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: 200px 190px 320px 50px 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". main ."
+        ". main ."
+        ". footer ."
+        ". . .";
+}
+
+.signin main {
+    display: grid;
     grid-template-columns: 1fr;
     border: 1px solid rgba(196, 195, 195, 0.659);
-    grid-template-rows: 170px 320px; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "header"
-      "form"; 
+    grid-template-rows: 170px 320px;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header"
+        "form";
     grid-area: main;
     justify-items: center;
     border-radius: 8px;
 }
+
 .signin header {
-    display: grid; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: 65px 50px 30px; 
-    gap: 0px 0px; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 65px 50px 30px;
+    gap: 0px 0px;
     grid-area: header;
     align-items: end;
     justify-items: center;
 }
-.signin header div{
-    display: grid; 
-    grid-template-columns: 18px repeat(3, 14px) 4px 15px; 
+
+.signin header div {
+    display: grid;
+    grid-template-columns: 18px repeat(3, 14px) 4px 15px;
     grid-template-rows: 1fr;
     align-items: end;
     justify-items: center;
 }
-.signin header div h2{
+
+.signin header div h2 {
     padding: 0;
     font-weight: bold;
     font-size: 24px;
 }
-.signin header div h2:nth-child(1),header div h2:nth-child(4){
+
+.signin header div h2:nth-child(1),
+header div h2:nth-child(4) {
     color: rgb(66, 133, 244);
 }
-.signin header div h2:nth-child(2), header div h2:nth-child(6){
+
+.signin header div h2:nth-child(2),
+header div h2:nth-child(6) {
     color: rgb(234, 67, 53);
 }
-.signin header div h2:nth-child(3){
-    color:  rgb(251, 188, 5);
+
+.signin header div h2:nth-child(3) {
+    color: rgb(251, 188, 5);
 }
-.signin header div h2:nth-child(5){
+
+.signin header div h2:nth-child(5) {
     color: rgb(52, 168, 83);
 }
-.signin header h2{
-   font-weight: normal;
-}
-.signin h4{
+
+.signin header h2 {
     font-weight: normal;
 }
+
+.signin h4 {
+    font-weight: normal;
+}
+
 .signin form {
-    display: grid; 
-    grid-template-columns: 360px; 
-    grid-template-rows: 100px 100px 100px; 
-    gap: 0px 0px; 
+    display: grid;
+    grid-template-columns: 360px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 0px 0px;
     grid-area: form;
     align-items: center;
 }
-.signin form div:nth-child(1){
-    display: grid; 
-    grid-template-rows: 54px 1fr; 
-    grid-template-columns: 1fr; 
+
+.signin form div:nth-child(1) {
+    display: grid;
+    grid-template-rows: 54px 1fr;
+    grid-template-columns: 1fr;
 }
+
 .signin input {
     border-radius: 5px;
     border: 1px solid rgba(213, 213, 213, 0.659);
     padding: 0 15px;
     font-size: 16px;
 }
-.signin form div:nth-child(2) p{
+
+.signin form div:nth-child(2) p {
     font-size: 14px;
     color: grey;
 }
-.signin form div:nth-child(3){
+
+.signin form div:nth-child(3) {
     display: grid;
-    grid-template-rows: 1fr; 
-    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
 }
-.signin form button{
+
+.signin form button {
     background-color: white;
     border: none;
-    color: #1a73e8;;
+    color: #1a73e8;
+    ;
     font-weight: 600;
     justify-self: start;
     padding: 8px 2px;
 }
-.signin form div:last-child button:first-child:hover{
+
+.signin form div:last-child button:first-child:hover {
     background-color: rgba(230, 239, 247, 0.659);
 }
-form div:last-child button:last-child{
+
+form div:last-child button:last-child {
     background-color: #1a73e8;
     color: white;
     padding: 12px 25px;
     border-radius: 5px;
     justify-self: end;
 }
-.signin form div:last-child button:last-child:hover{
+
+.signin form div:last-child button:last-child:hover {
     background-color: #0b62d5;
     cursor: pointer;
 }
 
 .signin footer {
-    display: grid; 
-    grid-template-columns: 3fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px; 
-    grid-area: footer; 
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-area: footer;
     align-items: center;
     font-size: 14px;
     color: rgb(90, 88, 88);
 }
+
 .signin footer p:hover {
     cursor: pointer;
 }
