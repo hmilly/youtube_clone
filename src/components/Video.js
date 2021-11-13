@@ -2,7 +2,6 @@ import React from 'react'
 import * as styles from '../styles/vid.module.css'
 
 const Video = ({ vidData }) => {
-
     const getDate = (year) => {
         const date = new Date
         const y = date.getFullYear() - year > 15 ? 15 : date.getFullYear() - year
@@ -17,8 +16,8 @@ const Video = ({ vidData }) => {
     return (
         <>
             {vidData.map((v, i) => (
-                <div className={styles.video} key={`v_${i}`}>
-                    <div className={styles.vid}>
+                <div key={`v_${i}`}>
+                    <div>
                         <iframe
                             src={`https://www.youtube.com/embed/${v.youtube_trailer_key}`}
                             loading="lazy"

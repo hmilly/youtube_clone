@@ -1,16 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Video from './Video.js'
 import ScrollingDiv from './ScrollingDiv'
 
-const VideoCont = ({ genre }) => {
+const VideoCont = ({ genres }) => {
+const [clicked, setClicked] = useState()
+
   return (
     <>
-    <ScrollingDiv/>
-      {genre.map((vidData, i) => (
+    <ScrollingDiv titles={genres}/>
+      {genres.map((genre, i) => (
         <div className="videoCategory" key={`video_${i}`}>
-          <h1>Trending</h1>
+          <h1>{genre.title}</h1>
           <div className="videos">
-            <Video vidData={vidData} />
+            <Video vidData={genre.data} />
           </div>
         </div>
       ))}

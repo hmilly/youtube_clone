@@ -1,51 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const ScrollingDiv = () => {
+const ScrollingDiv = ({ titles, setClicked }) => {
     return (
         <ul className="scrollingDiv">
             <button>➤</button>
             <li>
-                <p>All</p>
+                <p onClick={() => setClicked("")}>All</p>
             </li>
-            <li>
-                <p>Deep House</p>
-            </li>
-            <li>
-                <p>Comedies</p>
-            </li>
-            <li>
-                <p>Olympic Games</p>
-            </li>
-            <li>
-                <p>Boats</p>
-            </li>
-            <li>
-                <p>Playlists</p>
-            </li>
-            <li>
-                <p>The Grand Tour</p>
-            </li>
-            <li>
-                <p>Music</p>
-            </li>
-            <li>
-                <p>Live</p>
-            </li>
-            <li>
-                <p>ASMR</p>
-            </li>
-            <li>
-                <p>Trailers</p>
-            </li>
-            <li>
-                <p>Goalkeepers</p>
-            </li>
-            <li>
-                <p>Hamburgers</p>
-            </li>
-            <li>
-                <p>Martial arts</p>
-            </li>
+            {titles.map(t => (
+                <li onClick={() => setClicked(t.data)}>
+                    <p>{t.title}</p>
+                </li>
+            ))}
         </ul>
     )
 }

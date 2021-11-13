@@ -11,7 +11,7 @@ const IndexPage = () => {
       <Layout>
         <div className="videoContainer">
           {Object.values(db).map((d, i) =>
-            <VideoCont genre={d}  key={`genre_${i}`}/>
+            <VideoCont genres={d} key={`genre_${i}`} />
           )}
         </div>
       </Layout>
