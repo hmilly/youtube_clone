@@ -24,6 +24,7 @@
   justify-items: center;
   border-radius: 8px;
 }
+
 .signin header {
   display: grid;
   grid-template-columns: 1fr;
@@ -65,6 +66,7 @@ header div h2:nth-child(6) {
 .signin h4 {
   font-weight: normal;
 }
+
 .signin form {
   display: grid;
   grid-template-columns: 360px;
@@ -78,6 +80,7 @@ header div h2:nth-child(6) {
   grid-template-rows: 54px 1fr;
   grid-template-columns: 1fr;
 }
+
 .signin input {
   border-radius: 5px;
   border: 1px solid rgba(213, 213, 213, 0.659);
@@ -126,6 +129,7 @@ form div:last-child button:last-child {
   font-size: 14px;
   color: rgb(90, 88, 88);
 }
+
 .signin footer p:hover {
   cursor: pointer;
 }

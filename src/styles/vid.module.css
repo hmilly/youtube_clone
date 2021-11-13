@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* .video{
 
   width: 300px;
@@ -6,6 +7,8 @@
 } */
 
 
+=======
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 .vidData {
   display: grid;
   grid-auto-columns: 1fr;
@@ -13,9 +16,14 @@
   grid-template-rows: 1fr;
   gap: 2% 2%;
 }
+
 .vidData p {
   margin: 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 .img {
   width: 100%;
   height: auto;

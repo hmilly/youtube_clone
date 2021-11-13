@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import * as styles from '../styles/nav.module.css'
 import { StaticImage } from "gatsby-plugin-image"
 
-const TopNav = ({ changeNav }) => {
+const TopNav = ({ setLgnav, lgNav }) => {
   return (
     <div className={styles.topNav}>
       <div className={styles.topNavLeft}>
-        <button>
-          <span role="img" aria-label="dropdown" onClick={() => changeNav()}>☰</span>
+        <button onClick={() => setLgnav(!lgNav)}>
+          <span role="img" aria-label="dropdown">☰</span>
         </button>
         <Link to="/">
           <StaticImage src="../images/yt.png" alt="Youtube logo" />

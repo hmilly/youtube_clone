@@ -23,7 +23,6 @@
   grid-template-rows: 1fr;
   gap: 5px;
   grid-template-areas: "sideNav videoContainer";
-  overflow: hidden;
 }
 
 .videoContainer {
@@ -38,6 +37,16 @@
 .scrollingDiv {
   display: grid;
   position: relative;
+  height: 50px;
+  width: auto;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(213, 213, 213, 0.618);
+  border-top: 1px solid rgba(213, 213, 213, 0.618);
+}
+
+.scrollingDiv {
+  display: grid;
   grid-auto-columns: auto;
   grid-template-columns: repeat(23, auto);
   grid-template-rows: auto;
@@ -46,16 +55,20 @@
   border-bottom: 1px solid rgba(213, 213, 213, 0.618);
   border-top: 1px solid rgba(213, 213, 213, 0.618);
   padding: 10px;
-  overflow-x: scroll;
+  z-index: 99;
 }
 .scrollingDiv button {
   height: 100%;
   width: 56px;
   right: 0;
   border: none;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.907);
+  font-size: 30px;
+  overflow-x: none;
+}
+
+.scrollR {
+  right: 0;
 }
 .scrollingDiv::-webkit-scrollbar {
   display: none;
@@ -118,11 +131,19 @@ button:hover,
 link:hover {
   cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 button:visited,
 link:visited,
 a:visited {
   text-decoration: none;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 button:active,
 link:active,
 a:active {
@@ -141,6 +162,10 @@ a:active {
   background-color: white;
   text-decoration: none;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 #blueBtn span {
   width: 24px;
   height: 24px;
@@ -150,12 +175,20 @@ a:active {
   background-color: #065fd4;
   border-radius: 50%;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 #blueBtn p {
   padding: 3px;
   font-size: 14px;
   color: #065fd4;
   font-weight: 600;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 .blueBtn:hover,
 #blueBtn p:hover,
 .blueBtn:visited,
@@ -164,4 +197,8 @@ a:active {
 #blueBtn p:active {
   color: #065fd4;
   text-decoration: none;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b

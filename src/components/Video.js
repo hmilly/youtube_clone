@@ -54,7 +54,6 @@ const Video = ({ vidData }) => {
                         </div>
                     </div>
                 </div>
-
             ))}
         </>
     )
