@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const ScrollingDiv = ({ titles, setClicked }) => {
+const ScrollingDiv = ({ titles, setClicked, clicked }) => {
+
+    const scrollLeft = (e) => e.target.parentElement.scrollLeft += 500
+    const scrollRight = (e) => e.target.parentElement.scrollLeft += 500
     return (
         <ul className="scrollingDiv">
-            <button>➤</button>
-            <li>
-                <p onClick={() => setClicked("")}>All</p>
-            </li>
+            <button id="scrollBtn" onClick={(e) => scrollRight(e)}>➤</button>
+            <button onClick={() => setClicked(titles)}> 
+                All
+            </button>
             {titles.map(t => (
-                <li onClick={() => setClicked(t.data)}>
-                    <p>{t.title}</p>
-                </li>
+                <button onClick={() => setClicked([{ ...clicked, data: t.data }])}>
+                    {t.title}
+                </button>
             ))}
         </ul>
     )

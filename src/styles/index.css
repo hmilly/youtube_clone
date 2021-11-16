@@ -16,10 +16,10 @@
   overflow: hidden;
 }
 
-
 .sideNavContainer {
   grid-area: sideNavContainer;
   display: grid;
+  min-height: 0;
   grid-template-rows: 1fr;
   gap: 5px;
   grid-template-areas: "sideNav videoContainer";
@@ -34,47 +34,42 @@
   height: auto;
 }
 
-.scrollingDiv {
-  display: grid;
-  position: relative;
-  height: 50px;
-  width: auto;
-  scroll-behavior: smooth;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(213, 213, 213, 0.618);
-  border-top: 1px solid rgba(213, 213, 213, 0.618);
-}
 
 .scrollingDiv {
   display: grid;
+  position: relative;
   grid-auto-columns: auto;
-  grid-template-columns: repeat(23, auto);
+  grid-template-columns: repeat(24, auto);
   grid-template-rows: auto;
+  height: 51px;
+  width: 100%;
+  scroll-behavior: smooth;
   gap: 4px 15px;
-  height: 50px;
   border-bottom: 1px solid rgba(213, 213, 213, 0.618);
   border-top: 1px solid rgba(213, 213, 213, 0.618);
   padding: 10px;
-  z-index: 99;
+  overflow: hidden;
 }
-.scrollingDiv button {
-  height: 100%;
+#scrollBtn {
+  position: absolute;
+  height: 51px;
   width: 56px;
   right: 0;
+  top:0;
   border: none;
   background-color: rgba(255, 255, 255, 0.907);
   font-size: 30px;
   overflow-x: none;
+  border-radius: 0;
 }
-
-.scrollR {
-  right: 0;
+#scrollBtn:hover{
+  color: black;
 }
 .scrollingDiv::-webkit-scrollbar {
   display: none;
 }
 
-.scrollingDiv li {
+.scrollingDiv button {
   border: solid rgb(194, 194, 194) 1px;
   background-color: rgba(213, 213, 213, 0.659);
   border-radius: 20px;
@@ -83,15 +78,9 @@
   list-style-type: none;
   cursor: pointer;
 }
-.scrollingDiv p {
-  padding: 0;
-  margin: 0;
-  width: auto;
-}
-.scrollingDiv li:hover {
+
+.scrollingDiv button:hover {
   transition: background-color 0.5s ease;
-}
-.scrollingDiv li:active {
   background-color: black;
   color: white;
 }
@@ -109,13 +98,12 @@
   gap: 10px;
 }
 
-.vid{
+.vid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 10px;
 }
-
 
 span {
   display: inline-block;
@@ -131,22 +119,9 @@ button:hover,
 link:hover {
   cursor: pointer;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 button:visited,
 link:visited,
 a:visited {
-  text-decoration: none;
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
-button:active,
-link:active,
-a:active {
   text-decoration: none;
 }
 
@@ -162,10 +137,6 @@ a:active {
   background-color: white;
   text-decoration: none;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 #blueBtn span {
   width: 24px;
   height: 24px;
@@ -175,20 +146,12 @@ a:active {
   background-color: #065fd4;
   border-radius: 50%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 #blueBtn p {
   padding: 3px;
   font-size: 14px;
   color: #065fd4;
   font-weight: 600;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b
 .blueBtn:hover,
 #blueBtn p:hover,
 .blueBtn:visited,
@@ -197,8 +160,4 @@ a:active {
 #blueBtn p:active {
   color: #065fd4;
   text-decoration: none;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 021680c670ed82f35eb9759ba44ccd1562d44e7b

@@ -9,28 +9,28 @@ const SideNav = () => {
   return (
     <div className={styles.sideNav} >
       <ul>
-        <li>
+        <Link to="/">
           <StaticImage src="../images/compass.png" alt="compass" />
-          <Link to="/">Home</Link>
-        </li>
-        <li>
+          <p>Home</p>
+        </Link>
+        <Link to="/explore">
           <StaticImage src="../images/compass.png" alt="compass" />
-          <Link to="/explore">Explore</Link>
-        </li>
-        <li>
+          <p>Explore</p>
+        </Link>
+        <Link to="/subscriptions">
           <StaticImage src="../images/subscriptions.png" alt="subscriptions" />
-          <Link to="/subscriptions">Subscriptions</Link>
-        </li>
+          <p>subscriptions</p>
+        </Link>
       </ul>
       <ul>
-        <li>
+        <Link to="/library">
           <StaticImage src="../images/lib.png" alt="library" />
-          <Link to="/library">Library</Link>
-        </li>
-        <li>
+          <p>Library</p>
+        </Link>
+        <Link to="/history">
           <StaticImage src="../images/history.png" alt="history" />
-          <Link to="/history">History</Link>
-        </li>
+          <p>History</p>
+        </Link>
       </ul >
       <section className={styles.signInSect}>
         <p>Sign in to like videos, comment, and subscribe</p>
