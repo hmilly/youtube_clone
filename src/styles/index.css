@@ -34,7 +34,6 @@
   height: auto;
 }
 
-
 .scrollingDiv {
   display: grid;
   position: relative;
@@ -55,14 +54,14 @@
   height: 51px;
   width: 56px;
   right: 0;
-  top:0;
+  top: 0;
   border: none;
   background-color: rgba(255, 255, 255, 0.907);
   font-size: 30px;
   overflow-x: none;
   border-radius: 0;
 }
-#scrollBtn:hover{
+#scrollBtn:hover {
   color: black;
 }
 .scrollingDiv::-webkit-scrollbar {
@@ -85,7 +84,7 @@
   color: white;
 }
 
-.videoCategory {
+.videoGenre {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 1.8fr;
@@ -93,17 +92,28 @@
 }
 .videos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
+  align-content: flex-start;
+  justify-content: flex-start;
+  border: solid 1px yellow;
 }
 
-.vid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 10px;
+.video {
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+  height: 0;
 }
+iframe {
+  position: absolute;
+  height: 55%;
+  width: 100%;
+  min-width: 200px;
+  max-width: 600px;
+}
+
 
 span {
   display: inline-block;
@@ -160,4 +170,8 @@ a:visited {
 #blueBtn p:active {
   color: #065fd4;
   text-decoration: none;
+}
+
+.ytp-chrome-top {
+  z-index: 0;
 }
