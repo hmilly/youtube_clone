@@ -3,7 +3,7 @@ import * as styles from '../styles/vid.module.css'
 
 const Video = ({ vidData }) => {
     const getDate = (year) => {
-        const date = new Date
+        const date = new Date()
         const y = date.getFullYear() - year > 15 ? 15 : date.getFullYear() - year
         return y === 1 ? 2 : y
     }
@@ -22,19 +22,18 @@ const Video = ({ vidData }) => {
                         loading="lazy"
                         title={v.title}
                         samesite="secure"
+                        sandbox='allow-scripts allow-same-origin allow-presentation'
                         width="100%"
                         height="auto"
                         allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                         rel="0"
+                        origin="https://www.youtube.com/"
                         modestbranding="1"
                         autohide="1"
                         showinfo="0"
-                        controls="0"
                         frameBorder="0"
                         fs="0"
-                        title="Embedded youtube"
                     />
-
                     <div className={styles.vidData}>
                         <div className={styles.img}>
                             <span role="img" aria-label="tick">👤</span>
@@ -51,7 +50,6 @@ const Video = ({ vidData }) => {
                                 <p>{getDate(v.year)}</p>
                                 <p>years ago</p>
                             </div>
-
                         </div>
                     </div>
                 </div>

@@ -14,8 +14,8 @@ const VideoCont = ({ genres }) => {
       <ScrollingDiv titles={genres} setClicked={setClicked} clicked={clicked} />
       {clicked.map((genre, i) => (
         <div className="videoGenre" key={`video_${i}`}>
-          {genre.title !== undefined && <h1>{genre.title}</h1>}
-          <div className={genre.title !== undefined ? "videos" : "vids"}>
+          <h1>{genre.title}</h1>
+          <div className="videos">
             <Video vidData={genre.data} />
           </div>
         </div>
