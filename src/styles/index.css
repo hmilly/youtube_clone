@@ -180,7 +180,3 @@ a:visited {
   color: #065fd4;
   text-decoration: none;
 }
-
-.ytp-cued-thumbnail-overlay-image{
-  z-index: 99;
-}

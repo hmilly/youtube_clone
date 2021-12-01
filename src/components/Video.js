@@ -22,7 +22,6 @@ const Video = ({ vidData }) => {
                         loading="lazy"
                         title={v.title}
                         samesite="secure"
-                        sandbox='allow-scripts allow-same-origin allow-presentation'
                         width="100%"
                         height="auto"
                         allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
@@ -32,7 +31,7 @@ const Video = ({ vidData }) => {
                         autohide="1"
                         showinfo="0"
                         frameBorder="0"
-                        fs="0"
+                      
                     />
                     <div className={styles.vidData}>
                         <div className={styles.img}>

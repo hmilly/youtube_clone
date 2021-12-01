@@ -1,5 +1,4 @@
 import React from 'react';
-// import { store } from "./context"
 import Layout from "../components/Layout"
 import db from "../content/db"
 import VideoCont from "../components/VideoCont"

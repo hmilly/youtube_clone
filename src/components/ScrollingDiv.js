@@ -20,8 +20,8 @@ const ScrollingDiv = ({ titles, setClicked, clicked }) => {
             <button onClick={() => setClicked([...titles])}>
                 All
             </button>
-            {titles.map(t => (
-                <button onClick={() => setClicked([{ ...clicked, data: t.data }])}>
+            {titles.map((t, i) => (
+                <button key={i} onClick={() => setClicked([{ ...clicked, data: t.data }])}>
                     {t.title}
                 </button>
             ))}
