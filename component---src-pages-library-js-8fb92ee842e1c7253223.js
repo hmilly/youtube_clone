@@ -1,0 +1,2 @@
+(self.webpackChunkyoutube_clone=self.webpackChunkyoutube_clone||[]).push([[255],{7721:function(e,u,l){"use strict";l.r(u);var n=l(7294),t=l(2044);u.default=function(){return n.createElement(t.Z,null,n.createElement("div",null,n.createElement("p",null,"This would be the library page on Youtube")))}}}]);
+//# sourceMappingURL=component---src-pages-library-js-8fb92ee842e1c7253223.js.map

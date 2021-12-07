@@ -1,0 +1,2 @@
+(self.webpackChunkyoutube_clone=self.webpackChunkyoutube_clone||[]).push([[330],{2819:function(e,u,t){"use strict";t.r(u);var n=t(7294),l=t(2044);u.default=function(){return n.createElement(l.Z,null,n.createElement("div",null,n.createElement("p",null,"This would be the history page on Youtube")))}}}]);
+//# sourceMappingURL=component---src-pages-history-js-3c01a018a4c8f48d34b3.js.map

@@ -1,0 +1,2 @@
+(self.webpackChunkyoutube_clone=self.webpackChunkyoutube_clone||[]).push([[453],{5792:function(e,u,t){"use strict";t.r(u);var n=t(7294),l=t(2044);u.default=function(){return n.createElement(l.Z,null,n.createElement("div",null,n.createElement("p",null,"This would be the subsctiptions page on Youtube")))}}}]);
+//# sourceMappingURL=component---src-pages-subscriptions-js-e3d53cd6b6ad9b73a191.js.map
