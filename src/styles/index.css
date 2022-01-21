@@ -6,8 +6,7 @@
 
 .index {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 60px 1fr;
   gap: 5px;
   grid-template-areas:
     "topNav"
@@ -20,7 +19,6 @@
   grid-area: sideNavContainer;
   display: grid;
   min-height: 0;
-  grid-template-rows: 1fr;
   gap: 5px;
   grid-template-areas: "sideNav videoContainer";
 }
@@ -98,13 +96,13 @@
 .videoGenre {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 1.8fr;
+  grid-template-rows: 50px auto;
   gap: 10px;
 }
 .videos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: 1fr;
   gap: 10px;
   align-content: flex-start;
   justify-content: flex-start;
@@ -114,7 +112,9 @@
   overflow: hidden;
   padding-bottom: 80%;
   position: relative;
-  height: 0;
+  height: 100%;
+  min-width: 200px;
+  max-width: 600px;
 }
 iframe {
   position: absolute;
@@ -146,28 +146,27 @@ a:visited {
 
 #blueBtn {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  width: 116px;
-  height: 36px;
-  padding: 5px;
-  align-content: center;
-  justify-items: center;
+  grid-template-columns: 50px 80px;
+  grid-template-rows: 40px;
+  align-items: center;
   border: solid 1px #065fd4;
   background-color: white;
   text-decoration: none;
 }
 #blueBtn span {
-  width: 24px;
-  height: 24px;
-  padding: 1px;
-  font-size: 14px;
+  justify-self: end;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
   color: white;
-  background-color: #065fd4;
+  background-color: white;
+  border: solid 1px #065fd4;
   border-radius: 50%;
 }
 #blueBtn p {
-  padding: 3px;
-  font-size: 14px;
+  justify-self: start;
+  margin: 0 auto;
+  font-size: 16px;
   color: #065fd4;
   font-weight: 600;
 }

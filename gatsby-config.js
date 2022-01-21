@@ -4,17 +4,15 @@ module.exports = {
     title: "youtube-clone",
   },
   plugins: [
-    "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-image",
-    "gatsby-transformer-remark",
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
         path: "./src/images/",
+
       },
       __key: "images",
     },

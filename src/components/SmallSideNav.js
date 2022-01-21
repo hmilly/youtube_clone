@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 import * as styles from '../styles/nav.module.css'
 import { StaticImage } from "gatsby-plugin-image"
+import LinkItem from './LinkItem'
 
 const SmallSideNav = () => {
     return (

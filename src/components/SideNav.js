@@ -1,54 +1,64 @@
-import React from 'react'
-import { Link } from "gatsby"
-import * as styles from '../styles/nav.module.css'
-import { StaticImage } from "gatsby-plugin-image"
-import SnBestOf from './SnBestOf'
-import SnMore from './SnMore'
+import React from "react";
+import { Link } from "gatsby";
+import * as styles from "../styles/nav.module.css";
+import ListItem from "./ListItem";
+import LinkItem from "./LinkItem";
 
 const SideNav = () => {
   return (
-    <div className={styles.sideNav} >
+    <div className={styles.sideNav}>
       <ul>
-        <Link to="/">
-          <StaticImage src="../images/compass.png" alt="compass" />
-          <p>Home</p>
-        </Link>
-        <Link to="/explore">
-          <StaticImage src="../images/compass.png" alt="compass" />
-          <p>Explore</p>
-        </Link>
-        <Link to="/subscriptions">
-          <StaticImage src="../images/subscriptions.png" alt="subscriptions" />
-          <p>subscriptions</p>
-        </Link>
+        <LinkItem tag={"/"} imgName={"compass"} name={"Home"} />
+        <LinkItem tag={"/explore"} imgName={"compass"} name={"Explore"} />
+        <LinkItem
+          tag={"/subscriptions"}
+          imgName={"compass"}
+          name={"Subscriptions"}
+        />
       </ul>
       <ul>
-        <Link to="/library">
-          <StaticImage src="../images/lib.png" alt="library" />
-          <p>Library</p>
-        </Link>
-        <Link to="/history">
-          <StaticImage src="../images/history.png" alt="history" />
-          <p>History</p>
-        </Link>
-      </ul >
+        <LinkItem tag={"/library"} imgName={"lib"} name={"Library"} />
+        <LinkItem tag={"/history"} imgName={"history"} name={"History"} />
+      </ul>
       <section className={styles.signInSect}>
         <p>Sign in to like videos, comment, and subscribe</p>
         <Link id="blueBtn" to="/signin">
-          <span role="img" aria-label="profile">👤</span>
+          <span role="img" aria-label="profile">
+            👤
+          </span>
           <p>SIGN IN</p>
         </Link>
       </section>
       <h4>BEST OF YOUTUBE</h4>
-      <SnBestOf />
       <ul>
-        <li>
-          <StaticImage src="../images/plus.png" alt="plus symbol" />
-          <p>Browse Channels</p>
-        </li>
+        <ListItem imgName={"music"} name={"Music"} />
+        <ListItem imgName={"sport"} name={"Sports"} />
+        <ListItem imgName={"game"} name={"Gaming"} />
+        <ListItem imgName={"movie"} name={"Movie & Shows"} />
+        <ListItem imgName={"news"} name={"News"} />
+        <ListItem imgName={"live"} name={"Live"} />
+      </ul>
+      <ul>
+        <ListItem imgName={"fash"} name={"Fashion"} />
+        <ListItem imgName={"learn"} name={"Learning"} />
+        <ListItem imgName={"yt-red"} name={"Spotlight"} />
+        <ListItem imgName={"vr"} name={"360 Video"} />
+      </ul>
+      <ul>
+        <ListItem imgName={"plus"} name={"Browse Channels"} />
       </ul>
       <h4>MORE FROM YOUTUBE</h4>
-      <SnMore />
+      <ul>
+        <ListItem imgName={"yt-grey"} name={"YouTube Premium"} />
+        <ListItem imgName={"live"} name={"Live"} />
+        <ListItem imgName={"setting"} name={"Settings"} />
+        <ListItem imgName={"flag"} name={"Report History"} />
+        <ListItem imgName={"help"} name={"Help"} />
+        <li>
+          <h2>!</h2>
+          <p>Send Feedback</p>
+        </li>
+      </ul>
       <section>
         <h5>About</h5>
         <h5>Press</h5>
@@ -68,8 +78,8 @@ const SideNav = () => {
       <section>
         <p>© 2021 Google LLC</p>
       </section>
-    </div >
-  )
-}
+    </div>
+  );
+};
 
-export default SideNav
+export default SideNav;
