@@ -2,23 +2,46 @@ import React from "react";
 import { Link } from "gatsby";
 import * as styles from "../styles/nav.module.css";
 import ListItem from "./ListItem";
-import LinkItem from "./LinkItem";
+import { StaticImage } from "gatsby-plugin-image";
 
-const SideNav = () => {
+const SideNav = ({ lgNav }) => {
+  console.log(lgNav);
+
   return (
     <div className={styles.sideNav}>
       <ul>
-        <LinkItem tag={"/"} imgName={"compass"} name={"Home"} />
-        <LinkItem tag={"/explore"} imgName={"compass"} name={"Explore"} />
-        <LinkItem
+        <ListItem
+          tag={"/"}
+          img={<StaticImage src="../images/yt-grey.png" alt="Home" />}
+          name={"Home"}
+        />
+        <ListItem
+          tag={"/explore"}
+          img={<StaticImage src="../images/compass.png" alt="explore" />}
+          name={"Explore"}
+        />
+        <ListItem
           tag={"/subscriptions"}
-          imgName={"compass"}
+          img={
+            <StaticImage
+              src="../images/subscriptions.png"
+              alt="Subscriptions"
+            />
+          }
           name={"Subscriptions"}
         />
       </ul>
       <ul>
-        <LinkItem tag={"/library"} imgName={"lib"} name={"Library"} />
-        <LinkItem tag={"/history"} imgName={"history"} name={"History"} />
+        <ListItem
+          tag={"/library"}
+          img={<StaticImage src="../images/lib.png" alt="library" />}
+          name={"Library"}
+        />
+        <ListItem
+          tag={"/history"}
+          img={<StaticImage src="../images/history.png" alt="history" />}
+          name={"History"}
+        />
       </ul>
       <section className={styles.signInSect}>
         <p>Sign in to like videos, comment, and subscribe</p>
@@ -31,29 +54,79 @@ const SideNav = () => {
       </section>
       <h4>BEST OF YOUTUBE</h4>
       <ul>
-        <ListItem imgName={"music"} name={"Music"} />
-        <ListItem imgName={"sport"} name={"Sports"} />
-        <ListItem imgName={"game"} name={"Gaming"} />
-        <ListItem imgName={"movie"} name={"Movie & Shows"} />
-        <ListItem imgName={"news"} name={"News"} />
-        <ListItem imgName={"live"} name={"Live"} />
+        <ListItem
+          img={<StaticImage src="../images/music.png" alt="music" />}
+          name={"Music"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/sport.png" alt="sport" />}
+          name={"Sports"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/game.png" alt="gaming" />}
+          name={"Gaming"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/movie.png" alt="movies and shows" />}
+          name={"Movie & Shows"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/news.png" alt="news" />}
+          name={"News"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/live.png" alt="live" />}
+          name={"Live"}
+        />
       </ul>
       <ul>
-        <ListItem imgName={"fash"} name={"Fashion"} />
-        <ListItem imgName={"learn"} name={"Learning"} />
-        <ListItem imgName={"yt-red"} name={"Spotlight"} />
-        <ListItem imgName={"vr"} name={"360 Video"} />
+        <ListItem
+          img={<StaticImage src="../images/fash.png" alt="fashion" />}
+          name={"Fashion"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/learn.png" alt="learning" />}
+          name={"Learning"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/yt-red.png" alt="spotlight" />}
+          name={"Spotlight"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/vr.png" alt="vr 360 video" />}
+          name={"360 Video"}
+        />
       </ul>
       <ul>
-        <ListItem imgName={"plus"} name={"Browse Channels"} />
+        <ListItem
+          img={<StaticImage src="../images/plus.png" alt="browse channels" />}
+          name={"Browse Channels"}
+        />
       </ul>
       <h4>MORE FROM YOUTUBE</h4>
       <ul>
-        <ListItem imgName={"yt-grey"} name={"YouTube Premium"} />
-        <ListItem imgName={"live"} name={"Live"} />
-        <ListItem imgName={"setting"} name={"Settings"} />
-        <ListItem imgName={"flag"} name={"Report History"} />
-        <ListItem imgName={"help"} name={"Help"} />
+        <ListItem
+          img={
+            <StaticImage src="../images/yt-grey.png" alt="youtube premium" />
+          }
+          name={"YouTube Premium"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/live.png" alt="live" />}
+          name={"Live"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/setting.png" alt="settings" />}
+          name={"Settings"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/flag.png" alt="report history" />}
+          name={"Report History"}
+        />
+        <ListItem
+          img={<StaticImage src="../images/help.png" alt="help" />}
+          name={"Help"}
+        />
         <li>
           <h2>!</h2>
           <p>Send Feedback</p>

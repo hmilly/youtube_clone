@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from "../components/Layout"
-import db from "../content/db"
-import VideoCont from "../components/VideoCont"
+import React from "react";
+import Layout from "../components/Layout";
+import db from "../content/db";
+import VideoCont from "../components/VideoCont";
 
 // markup
 const IndexPage = () => {
@@ -9,14 +9,13 @@ const IndexPage = () => {
     <main className="index">
       <Layout>
         <div className="videoContainer">
-          {Object.values(db).map((d, i) =>
+          {Object.values(db).map((d, i) => (
             <VideoCont genres={d} key={`genre_${i}`} />
-          )}
+          ))}
         </div>
       </Layout>
     </main>
-  )
+  );
+};
 
-}
-
-export default IndexPage
+export default IndexPage;

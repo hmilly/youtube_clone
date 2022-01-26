@@ -68,7 +68,7 @@
 /* Side */
 .sideNav {
   grid-area: sideNav;
-  width: 235px;
+  width: 255px;
   height: 100%;
   padding-right: 10px;
   overflow: hidden;

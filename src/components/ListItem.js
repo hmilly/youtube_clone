@@ -1,10 +1,17 @@
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
-const ListItem = ({ imgName, name }) => {
-  return (
+const ListItem = ({ tag, img, name }) => {
+
+  
+  return tag !== undefined ? (
+    <Link to={`${tag}`}>
+      {img}
+      <p>{name}</p>
+    </Link>
+  ) : (
     <li>
-      <GatsbyImage image={imgName} alt={name} />
+      {img}
       <p>{name}</p>
     </li>
   );

@@ -12,7 +12,6 @@ module.exports = {
       options: {
         name: "images",
         path: "./src/images/",
-
       },
       __key: "images",
     },

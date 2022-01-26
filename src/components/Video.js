@@ -7,6 +7,7 @@ const Video = ({ vidData }) => {
     const y = date.getFullYear() - year > 15 ? 15 : date.getFullYear() - year;
     return y === 1 ? 2 : y;
   };
+  
   const getPopularity = (popularity) => {
     const arr = popularity.split(".");
     const sec = arr[0];
@@ -47,10 +48,11 @@ const Video = ({ vidData }) => {
                 </span>
               </div>
               <div>
-                <p>{getPopularity(v.popularity)}K</p>
-                <p>views</p>
-                <p>{getDate(v.year)}</p>
-                <p>years ago</p>
+                <p>{`${getPopularity(v.popularity)}K views`}</p>
+                <span role="img" aria-label="dot">
+                  •
+                </span>
+                <p>{` ${getDate(v.year)} weeks ago`}</p>
               </div>
             </div>
           </div>

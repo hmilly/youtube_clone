@@ -1,23 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 
 const ScrollingDiv = ({ titles, setClicked, clicked }) => {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrollNum, setScrollNum] = useState(0);
+  const [ulWidth, setUlWidth] = useState(1000);
+
+  const ul = useRef(null);
+  useEffect(() => {
+    if (ul.current) {
+      setUlWidth(ul.current.offsetWidth);
+    }
+  }, [ul]);
 
   const scrollLeft = (e) => {
-    if (e.target.parentElement.scrollRight !== 0) setScrolled(false);
-    e.target.parentElement.scrollRight -= 500;
+    setScrollNum((e.target.parentElement.scrollLeft -= 300));
+    e.target.parentElement.scrollLeft -= 300;
   };
+
   const scrollRight = (e) => {
-    if (e.target.parentElement.scrollLeft !== 0) setScrolled(true);
-    e.target.parentElement.scrollLeft += 500;
+    setScrollNum((e.target.parentElement.scrollLeft += 300));
+    e.target.parentElement.scrollLeft += 300;
+    console.log(e);
   };
 
   return (
-    <ul className="scrollingDiv">
-      <button id="scrollRight" onClick={(e) => scrollRight(e)}>
-        ›
-      </button>
-      {scrolled && (
+    <ul className="scrollingDiv" ref={ul}>
+      {scrollNum < ulWidth && (
+        <button id="scrollRight" onClick={(e) => scrollRight(e)}>
+          ›
+        </button>
+      )}
+
+      {scrollNum > 0 && (
         <button id="scrollLeft" onClick={(e) => scrollLeft(e)}>
           ‹
         </button>
