@@ -1,8 +1,11 @@
-* {
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
+  
+  * {
   box-sizing: border-box;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
 .index {
@@ -14,26 +17,25 @@
     "sideNavContainer";
   max-height: 100vh;
   overflow: hidden;
-}
-
 .sideNavContainer {
   grid-area: sideNavContainer;
   display: grid;
   min-height: 0;
   gap: 5px;
   grid-template-areas: "sideNav videoContainer";
-}
+
 
 .videoContainer {
   grid-area: videoContainer;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
   grid-gap: 5px;
   overflow-y: scroll;
   height: auto;
   background-color: rgb(243, 243, 243);
-}
 
+  
 .scrollingDiv {
   display: grid;
   position: sticky;
@@ -53,6 +55,23 @@
   overflow-x: scroll;
   overflow-y: hidden;
   z-index: 1;
+  &::-webkit-scrollbar {
+  display: none;
+}
+button {
+  border: solid rgb(194, 194, 194) 1px;
+  background-color: rgba(228, 228, 228, 0.659);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  white-space: nowrap;
+  list-style-type: none;
+  &:hover {
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  background-color: black;
+  color: white;
+}
 }
 #scrollRight,
 #scrollLeft {
@@ -64,6 +83,7 @@
   background-color: rgba(255, 255, 255, 0.907);
   font-size: 30px;
   border-radius: 0;
+  &:hover{color: black;}
 }
 #scrollRight {
   right: 6px;
@@ -72,62 +92,33 @@
 #scrollLeft {
   left: 255px;
   align-self: start;
-}
-
-#scrollRight:hover,
-#scrollLeft:hover {
-  color: black;
-}
-.scrollingDiv::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollingDiv button {
-  border: solid rgb(194, 194, 194) 1px;
-  background-color: rgba(228, 228, 228, 0.659);
-  border-radius: 20px;
-  padding: 10px;
-  font-size: 16px;
-  white-space: nowrap;
-  list-style-type: none;
-}
-
-.scrollingDiv button:hover {
-  cursor: pointer;
-  transition: background-color 0.5s ease;
-  background-color: black;
-  color: white;
-}
-
-.videoGenre {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50px 1fr;
-  gap: 20px;
-  margin: 15px 5%;
-  border-bottom: 4px solid rgb(209, 209, 209);
 
 }
-.videos {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
-  grid-template-rows: repeat(2, auto);
-  gap: 10px;
-  align-content: flex-start;
-  justify-content: flex-start;
 }
 
-.video {
-  overflow: hidden;
-  padding-bottom: 100%;
-  position: relative;
-  height: 100%;
+
+
+
+
+
+
+
+
+
 }
-iframe {
-  position: absolute;
-  height: 70%;
-  width: 100%;
+
+
 }
+
+  
+}
+
+
+
+
+
+
+
 
 span {
   display: inline-block;
@@ -157,8 +148,11 @@ a:visited {
   border: solid 1px #065fd4;
   background-color: white;
   text-decoration: none;
-}
-#blueBtn span {
+  &:hover, &:visited, &:active{
+    color: #065fd4;
+  text-decoration: none;
+  }
+  span {
   justify-self: end;
   width: 28px;
   height: 28px;
@@ -168,19 +162,20 @@ a:visited {
   border: solid 1px #065fd4;
   border-radius: 50%;
 }
-#blueBtn p {
+p {
   justify-self: start;
   margin: 0 auto;
   font-size: 16px;
   color: #065fd4;
   font-weight: 600;
-}
-.blueBtn:hover,
-#blueBtn p:hover,
-.blueBtn:visited,
-#blueBtn p:visited,
-.blueBtn:active,
-#blueBtn p:active {
-  color: #065fd4;
+  &:hover, &:visited, &:active{
+    color: #065fd4;
   text-decoration: none;
+  }
 }
+}
+
+
+
+
+`;

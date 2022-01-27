@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
-import * as styles from "../styles/nav.module.css";
+import { TopNav } from "../styles/Nav.styled";
 import { StaticImage } from "gatsby-plugin-image";
 
-const TopNav = ({ setLgnav, lgNav }) => {
+const NavTop = ({ setLgnav, lgNav }) => {
   return (
-    <div className={styles.topNav}>
-      <div className={styles.topNavLeft}>
+    <TopNav>
+      <div className="left">
         <button onClick={() => setLgnav(!lgNav)}>
           <span role="img" aria-label="dropdown">
             ☰
@@ -16,7 +16,7 @@ const TopNav = ({ setLgnav, lgNav }) => {
           <StaticImage src="../images/yt.png" alt="Youtube logo" />
         </Link>
       </div>
-      <form className={styles.topNavMid}>
+      <form className="mid">
         <input placeholder="Search"></input>
         <button>
           <span role="img" aria-label="dropdown">
@@ -29,7 +29,7 @@ const TopNav = ({ setLgnav, lgNav }) => {
           </span>
         </button>
       </form>
-      <div className={styles.topNavRight}>
+      <div className="right">
         <button>
           <span role="img" aria-label="grid">
             ▦
@@ -47,8 +47,8 @@ const TopNav = ({ setLgnav, lgNav }) => {
           <p>SIGN IN</p>
         </Link>
       </div>
-    </div>
+    </TopNav>
   );
 };
 
-export default TopNav;
+export default NavTop;

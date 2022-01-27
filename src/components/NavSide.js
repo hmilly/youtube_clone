@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
-import * as styles from "../styles/nav.module.css";
+import { SideNav, Ul, Section, SignInSection } from "../styles/Nav.styled";
 import ListItem from "./ListItem";
 import { StaticImage } from "gatsby-plugin-image";
 
-const SideNav = ({ lgNav }) => {
+const NavSide = ({ lgNav }) => {
   console.log(lgNav);
 
   return (
-    <div className={styles.sideNav}>
-      <ul>
+    <SideNav>
+      <Ul>
         <ListItem
           tag={"/"}
           img={<StaticImage src="../images/yt-grey.png" alt="Home" />}
@@ -30,8 +30,8 @@ const SideNav = ({ lgNav }) => {
           }
           name={"Subscriptions"}
         />
-      </ul>
-      <ul>
+      </Ul>
+      <Ul>
         <ListItem
           tag={"/library"}
           img={<StaticImage src="../images/lib.png" alt="library" />}
@@ -42,8 +42,8 @@ const SideNav = ({ lgNav }) => {
           img={<StaticImage src="../images/history.png" alt="history" />}
           name={"History"}
         />
-      </ul>
-      <section className={styles.signInSect}>
+      </Ul>
+      <SignInSection>
         <p>Sign in to like videos, comment, and subscribe</p>
         <Link id="blueBtn" to="/signin">
           <span role="img" aria-label="profile">
@@ -51,9 +51,9 @@ const SideNav = ({ lgNav }) => {
           </span>
           <p>SIGN IN</p>
         </Link>
-      </section>
+      </SignInSection>
       <h4>BEST OF YOUTUBE</h4>
-      <ul>
+      <Ul>
         <ListItem
           img={<StaticImage src="../images/music.png" alt="music" />}
           name={"Music"}
@@ -78,8 +78,8 @@ const SideNav = ({ lgNav }) => {
           img={<StaticImage src="../images/live.png" alt="live" />}
           name={"Live"}
         />
-      </ul>
-      <ul>
+      </Ul>
+      <Ul>
         <ListItem
           img={<StaticImage src="../images/fash.png" alt="fashion" />}
           name={"Fashion"}
@@ -96,15 +96,15 @@ const SideNav = ({ lgNav }) => {
           img={<StaticImage src="../images/vr.png" alt="vr 360 video" />}
           name={"360 Video"}
         />
-      </ul>
-      <ul>
+      </Ul>
+      <Ul>
         <ListItem
           img={<StaticImage src="../images/plus.png" alt="browse channels" />}
           name={"Browse Channels"}
         />
-      </ul>
+      </Ul>
       <h4>MORE FROM YOUTUBE</h4>
-      <ul>
+      <Ul>
         <ListItem
           img={
             <StaticImage src="../images/yt-grey.png" alt="youtube premium" />
@@ -131,8 +131,8 @@ const SideNav = ({ lgNav }) => {
           <h2>!</h2>
           <p>Send Feedback</p>
         </li>
-      </ul>
-      <section>
+      </Ul>
+      <Section>
         <h5>About</h5>
         <h5>Press</h5>
         <h5>Copyright</h5>
@@ -140,19 +140,19 @@ const SideNav = ({ lgNav }) => {
         <h5>Creators</h5>
         <h5>Advertise</h5>
         <h5>Developers</h5>
-      </section>
-      <section>
+      </Section>
+      <Section>
         <h5>Terms</h5>
         <h5>Privacy</h5>
         <h5>Policy & Safety</h5>
         <h5>How YouTube works</h5>
         <h5>Test new features</h5>
-      </section>
-      <section>
+      </Section>
+      <Section>
         <p>© 2021 Google LLC</p>
-      </section>
-    </div>
+      </Section>
+    </SideNav>
   );
 };
 
-export default SideNav;
+export default NavSide;

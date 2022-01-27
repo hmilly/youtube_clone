@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import TopNav from "./TopNav";
-import SideNav from "./SideNav";
+import NavTop from "./NavTop";
+import NavSide from "./NavSide";
 
 const Layout = ({ children }) => {
   const [lgNav, setLgnav] = useState(true);
   return (
     <>
-      <TopNav lgNav={lgNav} setLgnav={setLgnav} />
+      <NavTop lgNav={lgNav} setLgnav={setLgnav} />
       <div className="sideNavContainer">
-        <SideNav lgNav={lgNav} />
+        <NavSide lgNav={lgNav} />
         {children}
       </div>
     </>

@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "../styles/vid.module.css";
+import { VideoCard, VideoData } from "../styles/Vid.styled";
 
 const Video = ({ vidData }) => {
   const getDate = (year) => {
@@ -7,7 +7,7 @@ const Video = ({ vidData }) => {
     const y = date.getFullYear() - year > 15 ? 15 : date.getFullYear() - year;
     return y === 1 ? 2 : y;
   };
-  
+
   const getPopularity = (popularity) => {
     const arr = popularity.split(".");
     const sec = arr[0];
@@ -17,7 +17,7 @@ const Video = ({ vidData }) => {
   return (
     <>
       {vidData.map((v, i) => (
-        <div className="video" key={`v_${i}`}>
+        <VideoCard key={`v_${i}`}>
           <iframe
             src={`https://www.youtube.com/embed/${v.youtube_trailer_key}`}
             loading="lazy"
@@ -33,13 +33,13 @@ const Video = ({ vidData }) => {
             showinfo="0"
             frameBorder="0"
           />
-          <div className={styles.vidData}>
-            <div className={styles.img}>
+          <VideoData>
+            <div className="img">
               <span role="img" aria-label="tick">
                 👤
               </span>
             </div>
-            <div className={styles.details}>
+            <div className="details">
               <h3>{v.title}</h3>
               <div>
                 <p>{v.directors[0]}</p>
@@ -55,8 +55,8 @@ const Video = ({ vidData }) => {
                 <p>{` ${getDate(v.year)} weeks ago`}</p>
               </div>
             </div>
-          </div>
-        </div>
+          </VideoData>
+        </VideoCard>
       ))}
     </>
   );
