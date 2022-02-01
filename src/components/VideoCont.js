@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import Video from './Video.js'
-import ScrollingDiv from './ScrollingDiv'
+import React, { useState, useEffect } from "react";
+import Video from "./Video.js";
+import ScrollingDiv from "./ScrollingDiv";
 import { VideoGenres } from "../styles/Vid.styled";
 
 const VideoCont = ({ genres }) => {
-  const [clicked, setClicked] = useState([{ title: "", data: [] }])
+  const [clicked, setClicked] = useState([{ title: "", data: [] }]);
 
   useEffect(() => {
-    setClicked(genres)
-  }, [genres])
+    setClicked(genres);
+  }, [genres]);
 
   return (
     <>
@@ -22,7 +22,7 @@ const VideoCont = ({ genres }) => {
         </VideoGenres>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default VideoCont
+export default VideoCont;
