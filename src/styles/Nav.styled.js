@@ -3,14 +3,17 @@ import styled from "styled-components";
 export const TopNav = styled.nav`
   grid-area: topNav;
   display: grid;
-  grid-template-columns: 225px minmax(100px, 740px) 210px;
+  grid-template-columns:
+    minmax(125px, 225px)
+    minmax(100px, 740px)
+    minmax(40px, 210px);
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
   gap: 10px;
   .left {
     display: grid;
-    grid-template-columns: 60px auto;
+    grid-template-columns: 50px auto;
     align-items: center;
     justify-items: center;
     button {
@@ -29,9 +32,8 @@ export const TopNav = styled.nav`
     display: grid;
     grid-template-columns: minmax(60px, 720px) 64px 40px;
     grid-template-rows: 50px;
-    padding: 0 3=40px;
+    padding: 0 40px;
     justify-content: center;
-
     input {
       padding: 1% 2%;
       font-size: 16px;
@@ -65,6 +67,27 @@ export const TopNav = styled.nav`
       background-color: white;
     }
   }
+
+  // **** //Media Query // **** //
+  @media (max-width: 670px) {
+    justify-items: center;
+    .left button,
+    .mid input,
+    .mid button:nth-child(3),
+    .right button {
+      display: none;
+    }
+    .left {
+      justify-self: space-around;
+    }
+    .mid,
+    .right {
+      grid-template-columns: 40px;
+      padding: 0;
+      justify-self: end;
+    }
+  }
+  // **** //Media Query // **** //
 `;
 
 export const SideNav = styled.nav`
@@ -91,6 +114,13 @@ export const SideNav = styled.nav`
     padding: 22px 20px 0;
     color: rgb(114, 113, 113);
   }
+
+  // **** //Media Query // **** //
+  @media (max-width: 575px) {
+    display: none;
+    width: 0;
+  }
+  // **** //Media Query // **** //
 `;
 
 export const Ul = styled.ul`

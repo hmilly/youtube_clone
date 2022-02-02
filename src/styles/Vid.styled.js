@@ -7,6 +7,7 @@ export const VideoGenres = styled.div`
   gap: 20px;
   margin: 15px 5%;
   border-bottom: 4px solid rgb(209, 209, 209);
+
   h1 {
     color: black;
     padding: 20px;
@@ -15,8 +16,9 @@ export const VideoGenres = styled.div`
   }
   .videos {
     display: grid;
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    min-width: 300px;
     gap: 10px;
     align-content: flex-start;
     justify-content: flex-start;
@@ -57,7 +59,7 @@ export const VideoData = styled.div`
     display: grid;
     grid-template-rows: 1.5fr 1fr 1fr;
     gap: 2px;
-    h3 {
+    h2 {
       font-size: 120%;
     }
     div {

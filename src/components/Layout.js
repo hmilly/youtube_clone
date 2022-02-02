@@ -1,17 +1,17 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import NavTop from "./NavTop";
 import NavSide from "./NavSide";
 
 const Layout = ({ children }) => {
+  const [windowWidth, setWindowWidth] = useState(1400);
   const [lgNav, setLgnav] = useState(true);
-  const [w, setW] = useState(1000);
+
+  useEffect(() => {
+    windowWidth <= 1330 ? setLgnav(false) : setLgnav(true);
+  }, [windowWidth]);
 
   useLayoutEffect(() => {
-    setW(window.innerWidth);
-    const updateSize = () => {
-      w <= 1330 ? setLgnav(false) : setLgnav(true);
-    };
-
+    const updateSize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", updateSize);
   });
 
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     <>
       <NavTop lgNav={lgNav} setLgnav={setLgnav} />
       <div className="sideNavContainer">
-        {w >= 800 && <NavSide lgNav={lgNav} />}
+        <NavSide lgNav={lgNav} />
         {children}
       </div>
     </>

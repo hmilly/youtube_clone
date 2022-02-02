@@ -40,7 +40,7 @@ const Video = ({ vidData }) => {
               </span>
             </div>
             <div className="details">
-              <h3>{v.title}</h3>
+              <h2>{v.title}</h2>
               <div>
                 <p>{v.directors[0]}</p>
                 <span role="img" aria-label="tick">

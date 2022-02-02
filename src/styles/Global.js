@@ -11,6 +11,7 @@ font-family: Arial, Helvetica, sans-serif;
 .index {
   display: grid;
   grid-template-rows: 60px 1fr;
+  grid-template-columns: minmax(300px, 1fr);
   gap: 5px;
   grid-template-areas:
     "topNav"
@@ -18,12 +19,13 @@ font-family: Arial, Helvetica, sans-serif;
   max-height: 100vh;
   overflow: hidden;
 
+
   .sideNavContainer {
     grid-area: sideNavContainer;
     display: grid;
     min-height: 0;
     grid-template-areas: "sideNav videoContainer";
-   
+    
     .videoContainer {
       grid-area: videoContainer;
       display: grid;
@@ -33,7 +35,7 @@ font-family: Arial, Helvetica, sans-serif;
       overflow-y: scroll;
       height: auto;
       background-color: rgb(243, 243, 243);
-
+      
       .scrollingDiv {
         display: grid;
         position: sticky;
@@ -98,9 +100,6 @@ font-family: Arial, Helvetica, sans-serif;
   }
 }
 
-
-
-
 span {
     display: inline-block;
     font-size: 25px;
@@ -160,4 +159,21 @@ span {
     }
   }
 
+// **** //Media Query // **** //
+#blueBtn{
+  @media (max-width: 575px) {
+    grid-template-columns: 40px;
+    grid-template-rows: 40px;
+    border: none;
+    p{
+      display: none;
+    }
+  }
+}
+#scrollLeft, #scrollRight{
+  @media (max-width: 670px) {
+          display: none;
+          }
+}
+  // **** //Media Query // **** //
 `;
