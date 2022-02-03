@@ -1,8 +1,8 @@
 {
-  "name": "youtube-clone",
+  "name": "youtube_clone",
   "version": "1.0.0",
   "private": true,
-  "description": "youtube-clone",
+  "description": "youtube_clone",
   "author": "Holly",
   "keywords": [
     "gatsby"

@@ -1,7 +1,7 @@
 module.exports = {
-  pathPrefix: "/youtube-clone",
+  pathPrefix: "/youtube_clone",
   siteMetadata: {
-    title: "youtube-clone",
+    title: "youtube_clone",
   },
   plugins: [
     `gatsby-plugin-image`,

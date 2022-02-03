@@ -10,12 +10,12 @@ const NavItem = ({ tag, img, name }) => {
         fontWeight: 600,
       }}
     >
-      <img src={`/${img}`} alt={`${name}`}></img>
+      {img}
       <p>{name}</p>
     </Link>
   ) : (
     <li>
-      <img src={`/${img}`} alt={`${name}`}></img>
+      {img}
       <p>{name}</p>
     </li>
   );

@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   });
 
   return (
-    <body className="index">
+    <main className="index">
       <GlobalStyles />
       <title>Youtube clone</title>
       <PgHead lgNav={lgNav} setLgnav={setLgnav} />
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
         <NavSide lgNav={lgNav} />
         {children}
       </main>
-    </body>
+    </main>
   );
 };
 

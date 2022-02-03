@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Header } from "../styles/Nav.styled";
+import { StaticImage } from "gatsby-plugin-image";
 
 const PgHead = ({ setLgnav, lgNav }) => {
   return (
@@ -12,7 +13,7 @@ const PgHead = ({ setLgnav, lgNav }) => {
           </span>
         </button>
         <Link to="/">
-          <img src={"/yt.png"} alt="Youtube logo" />
+          <StaticImage src="../images/yt.png" alt="Youtube logo" />
         </Link>
       </div>
       <form className="mid">
