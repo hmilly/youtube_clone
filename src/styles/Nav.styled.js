@@ -22,10 +22,10 @@ export const Header = styled.header`
       border: none;
     }
     a,
-    div {
+    img {
       padding: 0;
       width: 120px;
-      height: 30px;
+      height: auto;
     }
   }
   .mid {
