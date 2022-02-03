@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkyoutube_clone=self.webpackChunkyoutube_clone||[]).push([[87],{9710:function(e,n,t){t.r(n);var u=t(7294),l=t(72);n.default=function(){return u.createElement(l.Z,null,u.createElement("div",{className:"contentContainer"},u.createElement("p",null,"This would be the explore page on Youtube")))}}}]);
+//# sourceMappingURL=component---src-pages-explore-js-fa81eb4882f3d91b7995.js.map
