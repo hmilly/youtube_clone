@@ -1,9 +1,10 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
-import NavTop from "./NavTop";
+import PgHead from "./PgHead";
 import NavSide from "./NavSide";
+import { GlobalStyles } from "../styles/Global";
 
 const Layout = ({ children }) => {
-  const [windowWidth, setWindowWidth] = useState(1400);
+  const [windowWidth, setWindowWidth] = useState();
   const [lgNav, setLgnav] = useState(true);
 
   useEffect(() => {
@@ -16,13 +17,15 @@ const Layout = ({ children }) => {
   });
 
   return (
-    <>
-      <NavTop lgNav={lgNav} setLgnav={setLgnav} />
-      <div className="sideNavContainer">
+    <body className="index">
+      <GlobalStyles />
+      <title>Youtube clone</title>
+      <PgHead lgNav={lgNav} setLgnav={setLgnav} />
+      <main className="sideNavContainer">
         <NavSide lgNav={lgNav} />
         {children}
-      </div>
-    </>
+      </main>
+    </body>
   );
 };
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const VideoGenres = styled.div`
+export const Genres = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr;
@@ -37,7 +37,7 @@ export const VideoCard = styled.div`
   }
 `;
 
-export const VideoData = styled.div`
+export const VideoData = styled.section`
   position: absolute;
   top: 72%;
   height: auto;

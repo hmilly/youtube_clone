@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { SideNav, Ul, Section, SignInSection } from "../styles/Nav.styled";
-import ListItem from "./ListItem";
+import NavItem from "./NavItem";
 import { StaticImage } from "gatsby-plugin-image";
 
 const NavSide = ({ lgNav }) => {
@@ -9,17 +9,17 @@ const NavSide = ({ lgNav }) => {
     <SideNav sm={!lgNav}>
       <>
         <Ul sm={!lgNav}>
-          <ListItem
+          <NavItem
             tag={"/"}
             img={<StaticImage src="../images/yt-grey.png" alt="Home" />}
             name={"Home"}
           />
-          <ListItem
+          <NavItem
             tag={"/explore"}
             img={<StaticImage src="../images/compass.png" alt="explore" />}
             name={"Explore"}
           />
-          <ListItem
+          <NavItem
             tag={"/subscriptions"}
             img={
               <StaticImage
@@ -31,12 +31,12 @@ const NavSide = ({ lgNav }) => {
           />
         </Ul>
         <Ul sm={!lgNav}>
-          <ListItem
+          <NavItem
             tag={"/library"}
             img={<StaticImage src="../images/lib.png" alt="library" />}
             name={"Library"}
           />
-          <ListItem
+          <NavItem
             tag={"/history"}
             img={<StaticImage src="../images/history.png" alt="history" />}
             name={"History"}
@@ -56,53 +56,53 @@ const NavSide = ({ lgNav }) => {
           </SignInSection>
           <h4>BEST OF YOUTUBE</h4>
           <Ul>
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/music.png" alt="music" />}
               name={"Music"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/sport.png" alt="sport" />}
               name={"Sports"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/game.png" alt="gaming" />}
               name={"Gaming"}
             />
-            <ListItem
+            <NavItem
               img={
                 <StaticImage src="../images/movie.png" alt="movies and shows" />
               }
               name={"Movie & Shows"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/news.png" alt="news" />}
               name={"News"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/live.png" alt="live" />}
               name={"Live"}
             />
           </Ul>
           <Ul>
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/fash.png" alt="fashion" />}
               name={"Fashion"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/learn.png" alt="learning" />}
               name={"Learning"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/yt-red.png" alt="spotlight" />}
               name={"Spotlight"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/vr.png" alt="vr 360 video" />}
               name={"360 Video"}
             />
           </Ul>
           <Ul>
-            <ListItem
+            <NavItem
               img={
                 <StaticImage src="../images/plus.png" alt="browse channels" />
               }
@@ -111,7 +111,7 @@ const NavSide = ({ lgNav }) => {
           </Ul>
           <h4>MORE FROM YOUTUBE</h4>
           <Ul>
-            <ListItem
+            <NavItem
               img={
                 <StaticImage
                   src="../images/yt-grey.png"
@@ -120,21 +120,21 @@ const NavSide = ({ lgNav }) => {
               }
               name={"YouTube Premium"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/live.png" alt="live" />}
               name={"Live"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/setting.png" alt="settings" />}
               name={"Settings"}
             />
-            <ListItem
+            <NavItem
               img={
                 <StaticImage src="../images/flag.png" alt="report history" />
               }
               name={"Report History"}
             />
-            <ListItem
+            <NavItem
               img={<StaticImage src="../images/help.png" alt="help" />}
               name={"Help"}
             />

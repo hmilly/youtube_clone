@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ScrollingDiv = ({ titles, setClicked, clicked }) => {
+const ScrollingDiv = ({ filmData, setClicked, clicked }) => {
   const [scrollNum, setScrollNum] = useState(0);
   const [ulWidth, setUlWidth] = useState(600);
 
@@ -42,14 +42,18 @@ const ScrollingDiv = ({ titles, setClicked, clicked }) => {
           ‹
         </button>
       )}
-      <button onClick={() => setClicked([...titles])}>All</button>
-      {titles.map((t, i) => (
-        <button
-          key={i}
-          onClick={() => setClicked([{ ...clicked, data: t.data }])}
-        >
-          {t.title}
-        </button>
+      <li>
+        <button onClick={(e) => setClicked([...filmData])}>All</button>
+      </li>
+      {filmData.map((t, i) => (
+        <li>
+          <button
+            key={i}
+            onClick={(e) => setClicked([{ ...clicked, data: t.data }])}
+          >
+            {t.title}
+          </button>
+        </li>
       ))}
     </ul>
   );

@@ -14,7 +14,7 @@ font-family: Arial, Helvetica, sans-serif;
   grid-template-columns: minmax(300px, 1fr);
   gap: 5px;
   grid-template-areas:
-    "topNav"
+    "Header"
     "sideNavContainer";
   max-height: 100vh;
   overflow: hidden;
@@ -23,9 +23,16 @@ font-family: Arial, Helvetica, sans-serif;
   .sideNavContainer {
     grid-area: sideNavContainer;
     display: grid;
-    min-height: 0;
+    min-height: 100%;
     grid-template-areas: "sideNav videoContainer";
     
+    .contentContainer{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      font-size: 20px;
+    }
     .videoContainer {
       grid-area: videoContainer;
       display: grid;
@@ -35,7 +42,6 @@ font-family: Arial, Helvetica, sans-serif;
       overflow-y: scroll;
       height: auto;
       background-color: rgb(243, 243, 243);
-      
       .scrollingDiv {
         display: grid;
         position: sticky;
@@ -59,6 +65,8 @@ font-family: Arial, Helvetica, sans-serif;
         &::-webkit-scrollbar {
           display: none;
         }
+        li{
+          list-style-type: none;
         button {
           border: solid rgb(194, 194, 194) 1px;
           background-color: rgba(228, 228, 228, 0.659);
@@ -67,12 +75,16 @@ font-family: Arial, Helvetica, sans-serif;
           font-size: 16px;
           white-space: nowrap;
           list-style-type: none;
+          &:active{
+            background-color: black;
+          }
           &:hover {
             cursor: pointer;
             transition: background-color 0.5s ease;
             background-color: black;
             color: white;
           }
+        }
         }
         #scrollRight,
         #scrollLeft {
@@ -161,7 +173,7 @@ span {
 
 // **** //Media Query // **** //
 #blueBtn{
-  @media (max-width: 575px) {
+  @media (max-width: 670px) {
     grid-template-columns: 40px;
     grid-template-rows: 40px;
     border: none;

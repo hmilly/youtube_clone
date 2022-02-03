@@ -16,12 +16,12 @@ const Video = ({ vidData }) => {
 
   return (
     <>
-      {vidData.map((v, i) => (
+      {vidData.map((video, i) => (
         <VideoCard key={`v_${i}`}>
           <iframe
-            src={`https://www.youtube.com/embed/${v.youtube_trailer_key}`}
+            src={`https://www.youtube.com/embed/${video.youtube_trailer_key}`}
             loading="lazy"
-            title={v.title}
+            title={video.title}
             samesite="secure"
             width="100%"
             height="auto"
@@ -40,19 +40,19 @@ const Video = ({ vidData }) => {
               </span>
             </div>
             <div className="details">
-              <h2>{v.title}</h2>
+              <h2>{video.title}</h2>
               <div>
-                <p>{v.directors[0]}</p>
+                <p>{video.director}</p>
                 <span role="img" aria-label="tick">
                   ✔
                 </span>
               </div>
               <div>
-                <p>{`${getPopularity(v.popularity)}K views`}</p>
+                <p>{`${getPopularity(video.popularity)}K views`}</p>
                 <span role="img" aria-label="dot">
                   •
                 </span>
-                <p>{` ${getDate(v.year)} weeks ago`}</p>
+                <p>{` ${getDate(video.year)} weeks ago`}</p>
               </div>
             </div>
           </VideoData>

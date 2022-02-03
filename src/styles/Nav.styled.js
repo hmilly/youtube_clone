@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const TopNav = styled.nav`
-  grid-area: topNav;
+export const Header = styled.header`
+  grid-area: Header;
   display: grid;
   grid-template-columns:
     minmax(125px, 225px)
@@ -37,7 +37,7 @@ export const TopNav = styled.nav`
     input {
       padding: 1% 2%;
       font-size: 16px;
-      color: rgba(223, 222, 222, 0.871);
+      color: black;
       border: solid 1px rgba(223, 222, 222, 0.871);
     }
     button {
@@ -80,11 +80,20 @@ export const TopNav = styled.nav`
     .left {
       justify-self: space-around;
     }
+    .right {
+      justify-self: start;
+    }
+    .mid {
+      justify-self: end;
+    }
     .mid,
     .right {
       grid-template-columns: 40px;
       padding: 0;
-      justify-self: end;
+      button {
+        background-color: white;
+        border: none;
+      }
     }
   }
   // **** //Media Query // **** //
